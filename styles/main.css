@@ -41,3 +41,13 @@ header img {
 footer {
     font-size: smaller;
 }
+
+/* Week 1 */
+
+h3 {
+    font-size: 0.5rem;
+}
+
+textarea {
+    padding: 10px 0;
+}
