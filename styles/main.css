@@ -45,7 +45,7 @@ footer {
 /* Week 1 */
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
 textarea {
@@ -56,5 +56,5 @@ textarea {
 }
 
 button {
-    padding: 2px;
+    padding: 8px;
 }
