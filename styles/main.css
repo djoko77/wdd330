@@ -59,3 +59,7 @@ button {
     padding: 4px;
     margin: 4px;
 }
+
+.subnotes {
+    font: 0.75rem;
+}
