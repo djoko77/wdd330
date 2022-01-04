@@ -50,6 +50,9 @@ h3 {
 
 textarea {
     padding: 5px 0;
+    width: 800px;
+    height: 250px;
+    background-color: lightyellow;
 }
 
 button {

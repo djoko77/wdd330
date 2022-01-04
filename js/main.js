@@ -47,3 +47,22 @@ function createList() {
 
 // Run the function
 createList();
+
+// Week 1 localStorage
+
+function loadStory() {
+    var storyName = document.getElementById("name_input").value
+    var storyHTML = localStorage.getItem(storyName)
+    document.getElementById("story_editor").value = storyHTML
+}
+
+function saveStory(){
+    var storyName = document.getElementById("name_input").value
+    var storyHTML = document.getElementById("story_editor").value
+    localStorage.setItem(storyName, storyHTML)
+}
+
+function dsiplayStory(){
+    var storyHTML = document.getElementById("story_editor").value
+    document.getElementById("story_display").innerHTML = storyHTML
+}
