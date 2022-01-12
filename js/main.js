@@ -134,8 +134,8 @@ function conAddition (numbers) {
         sum = sum + i;
     }
 
-    return sum;
-    
+    return document.getElementById("addition-box").innerHTML = sum
+
 }
 
 
