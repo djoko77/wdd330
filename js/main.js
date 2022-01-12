@@ -97,7 +97,7 @@ function equals () {
         document.getElementById("show-result").innerHTML = "EQUAL"
     }
     else {
-        document.getElementById("show-resul").innerHTML = "UNEQUAL"
+        document.getElementById("show-result").innerHTML = "UNEQUAL"
     }
 
 }
