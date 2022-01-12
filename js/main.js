@@ -69,7 +69,10 @@ function displayStory(){
 
 // Week 2 functions
 
-// Calling function
+/*
+Calling a function
+*/
+
 function greet() {
     return "Good Morning, My Young Padawan!"
 }
@@ -77,4 +80,24 @@ function greet() {
 function clickGreetings() {
     let salutation = greet();
     document.getElementById("jedi-greeting").innerHTML = salutation
+}
+
+/*
+Write a function equals that checks two values for strict equality. If the two values are equal, 
+the string 'EQUAL' should be returned. If they are unequal, you should get 'UNEQUAL'.
+Example: equals(1, 1) should return 'EQUAL' and equals(1, 2) should return 'UNEQUAL'.
+*/
+
+function equals () {
+
+    var firstNumber = document.getElementById("number1").value
+    var secondNumber = document.getElementById("number2").value
+
+    if (firstNumber === secondNumber) {
+        document.getElementById("show-result").innerHTML = "EQUAL"
+    }
+    else {
+        document.getElementById("show-resul").innerHTML = "UNEQUAL"
+    }
+
 }
