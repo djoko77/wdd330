@@ -74,12 +74,12 @@ Calling a function
 */
 
 function greet() {
-    return "Good Morning, My Young Padawan!"
+    return "Good Morning, My Young Padawan!";
 }
 
 function clickGreetings() {
     let salutation = greet();
-    document.getElementById("jedi-greeting").innerHTML = salutation
+    document.getElementById("jedi-greeting").innerHTML = salutation;
 }
 
 /*
@@ -89,8 +89,8 @@ Example: equals(1, 1) should return 'EQUAL' and equals(1, 2) should return 'UNEQ
 */
 
 function equals () {
-    var firstNumber = document.getElementById("number1").value
-    var secondNumber = document.getElementById("number2").value
+    var firstNumber = document.getElementById("number1").value;
+    var secondNumber = document.getElementById("number2").value;
 
     if (firstNumber === secondNumber) {
         document.getElementById("show-result").innerHTML = "EQUAL"
@@ -108,8 +108,8 @@ TEAM ACTIVITY Week 2 - 1
 */
 
 function displayMessage() {
-    var messageNow = document.getElementById("message").value
-    document.getElementById("empty-box").innerHTML = messageNow
+    var messageNow = document.getElementById("message").value;
+    document.getElementById("empty-box").innerHTML = messageNow;
 }
 
 /*
@@ -125,17 +125,23 @@ and output the result to the div.
 
 */
 
-function conAddition() {
-
-    let numbers = parseInt(document.getElementById("number").value)
-    let sum = 0;
-
-    for (let i = 0; i <= number; i++) {
-        sum += i;
+function checkNumber() {
+    isNumber = document.getElementById("number").value;
+    if (isNaN(isNumber)) {
+        return "Wrong input! Please enter a number"
     }
+}
 
-    return document.getElementById("addition-box").innerHTML = sum
+function conAddition(number) {
 
+    if (checkNumber) {
+        let sum = parseInt(number)
+        
+        for (let i = 0; i <= number; i++) {
+            sum += i;
+        }
+    document.getElementById("addition-box").innerHTML = sum;
+    }
 }
 
 /*
@@ -150,12 +156,12 @@ add them together, and output the result to a div
 
 function addNumbers() {
 
-    let firstNumber = document.getElementById("add1").value
-    let secondNumber = document.getElementById("add2").value
+    let firstNumber = document.getElementById("add1").value;
+    let secondNumber = document.getElementById("add2").value;
 
-    let sum = parseInt(firstNumber) + parseInt(secondNumber)
+    let sum = parseInt(firstNumber) + parseInt(secondNumber);
 
-    return document.getElementById("addition-result").innerHTML = sum
+    document.getElementById("addition-result").innerHTML = sum;
 
 }
 
