@@ -125,12 +125,9 @@ and output the result to the div.
 
 */
 
-var call = function(numbers) {
+function conAddition(numbers) {
 
-    var data = numbers.value;
-    let data = parseInt(data)
-
-    if (Number.isInteger(data)) {
+    if (Number.isInteger(numbers)) {
 
         let sum = 0
         
