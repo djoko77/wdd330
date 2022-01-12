@@ -130,8 +130,8 @@ function conAddition (numbers) {
     let numbers = document.getElementById("number").value
     let sum = 0;
 
-    for (let i = numbers; i = 0; i--) {
-        sum = sum + i;
+    for (let i = 0; i < number; i++) {
+        sum += i;
     }
 
     return document.getElementById("addition-box").innerHTML = sum
