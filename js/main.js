@@ -128,16 +128,13 @@ and output the result to the div.
 function conAddition(numbers) {
 
     if (Number.isInteger(numbers)) {
-
         let numbers = parseInt(numbers)
         let sum = 0
-        
         for (let i = 0; i <= numbers; i++) {
             sum += i;
         }
     document.getElementById("addition-box").innerHTML = sum
     }
-
     else {
         document.getElementById("addition-box").innerHTML = "Wrong input! Please enter a number"
     }
