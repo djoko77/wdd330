@@ -41,7 +41,7 @@ function createList() {
         let list = document.getElementById("activity")
         
         // Append the li element to the list
-        list.appendChild(li)
+        list.appendChild(li);
         }
         )}
 
@@ -127,8 +127,10 @@ and output the result to the div.
 
 function conAddition(numbers) {
 
-    if (Number.isInteger(document.getElementById("numbers").value)) {
-        let sum = parseInt(numbers)
+    let numbers = parseInt(document.getElementById("numbers").value)
+
+    if (Number.isInteger(numbers)) {
+        let sum = numbers
         
         for (let i = 0; i <= numbers; i++) {
             sum += i;
