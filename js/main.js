@@ -125,7 +125,7 @@ and output the result to the div.
 
 */
 
-function conAddition(numbers) {
+function conAddition() {
 
     let numbers = document.getElementById("number").value
     let sum = 0;
