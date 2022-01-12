@@ -125,15 +125,16 @@ and output the result to the div.
 
 */
 
-function conAddition(numbers) {
+var call = function(numbers) {
 
-    let numbers = parseInt(numbers)
+    var data = numbers.value;
+    let data = parseInt(data)
 
-    if (Number.isInteger(numbers)) {
+    if (Number.isInteger(data)) {
 
         let sum = 0
         
-        for (let i = 0; i <= numbers; i++) {
+        for (let i = 0; i <= data; i++) {
             sum += i;
         }
     document.getElementById("addition-box").innerHTML = sum
