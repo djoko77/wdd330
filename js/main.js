@@ -138,4 +138,24 @@ function conAddition (numbers) {
 
 }
 
+/*
+TEAM ACTIVITY Week 2 - 3
+
+1. Add an additional input to your HTML file.
+2. Add a + button.
+3. Write a function that will take the numbers from each input, 
+add them together, and output the result to a div
+
+*/
+
+function addNumbers() {
+
+    let firstNumber = document.getElementById("add1").value
+    let secondNumber = document.getElementById("add2").value
+
+    let sum = firstNumber + secondNumber
+
+    return document.getElementById("addition-result").innerHTML = sum
+
+}
 
