@@ -101,7 +101,7 @@ function equals () {
 }
 
 /*
-TEAM ACTIVITY
+TEAM ACTIVITY Week 2 - 1
 1 Add a text input and a button. Put an empty div with an ID below those.
 2 Add a script tag, write a function that will read the contents of the input, and write them to the div.
 3 Call the function when the button is pressed.
@@ -110,6 +110,32 @@ TEAM ACTIVITY
 function displayMessage() {
     var messageNow = document.getElementById("message").value
     document.getElementById("empty-box").innerHTML = messageNow
+}
+
+/*
+TEAM ACTIVITY Week 2 - 2
+
+1. Write a new function that expects a number as an argument. 
+It should take that number and sum all the numbers up to the number provided. 
+(ie n=5…so it would do 1+2+3+4+5 = 15) It should return that value.
+
+2. When the button is pressed it should read the number from the input. 
+Make sure it is a valid number, call the summing function you just wrote, 
+and output the result to the div.
+
+*/
+
+function conAddition (numbers) {
+
+    let numbers = document.getElementById("number").value
+    let sum = 0;
+
+    for (let i = numbers; i = 0; i--) {
+        sum = sum + i;
+    }
+
+    return sum;
+    
 }
 
 
