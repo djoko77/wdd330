@@ -125,22 +125,19 @@ and output the result to the div.
 
 */
 
-function checkNumber() {
-    isNumber = document.getElementById("number").value;
-    if (isNaN(isNumber)) {
-        return "Wrong input! Please enter a number"
-    }
-}
-
 function conAddition(number) {
 
-    if (checkNumber) {
+    if (isInterger(document.getElementById("number").value)) {
         let sum = parseInt(number)
         
         for (let i = 0; i <= number; i++) {
             sum += i;
         }
     document.getElementById("addition-box").innerHTML = sum;
+    }
+
+    else {
+        document.getElementById("addition-box").innerHTML = "Wrong input! Please enter a number"
     }
 }
 
