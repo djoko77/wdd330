@@ -127,7 +127,7 @@ and output the result to the div.
 
 function conAddition(number) {
 
-    if (isInterger(document.getElementById("number").value)) {
+    if (isInteger(document.getElementById("number").value)) {
         let sum = parseInt(number)
         
         for (let i = 0; i <= number; i++) {
