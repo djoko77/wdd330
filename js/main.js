@@ -74,8 +74,7 @@ function greet() {
     return "Good Morning, My Young Padawan!"
 }
 
-let salutation = greet();
-
 function clickGreetings() {
+    let salutation = greet();
     document.getElementById("jedi-greeting").innerHTML = salutation
 }
