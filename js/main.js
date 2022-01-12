@@ -89,7 +89,6 @@ Example: equals(1, 1) should return 'EQUAL' and equals(1, 2) should return 'UNEQ
 */
 
 function equals () {
-
     var firstNumber = document.getElementById("number1").value
     var secondNumber = document.getElementById("number2").value
 
@@ -99,5 +98,18 @@ function equals () {
     else {
         document.getElementById("show-result").innerHTML = "UNEQUAL"
     }
-
 }
+
+/*
+TEAM ACTIVITY
+1 Add a text input and a button. Put an empty div with an ID below those.
+2 Add a script tag, write a function that will read the contents of the input, and write them to the div.
+3 Call the function when the button is pressed.
+*/
+
+function displayMessage() {
+    var messageNow = document.getElementById("message").value
+    document.getElementById("empty-box").innerHTML = messageNow
+}
+
+
