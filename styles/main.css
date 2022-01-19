@@ -44,7 +44,7 @@ footer {
 /* Week 1 */
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 20px;
 }
 
 textarea {
@@ -60,7 +60,7 @@ button {
 }
 
 .subnotes {
-    font: 0.75rem;
+    font: 12px;
 }
 
 .home-button {
