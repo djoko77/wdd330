@@ -16,8 +16,69 @@
         </header>
         <main>
         
-            <h2>PAGE IS UNDER CONSTRUCTION</h2>
+            <h2>WEEK 3 Notes</h2>
             <br>
+
+            <h3>Object Methods: this</h3>
+            <ul class="subnotes">
+                <li>To access the object, a method can use the this keyword</li>
+                <li>It can be used in any function, even if it's not a method of an object</li>
+                <li>The value of this is defined at run-time</li>
+            </ul> 
+
+            <br>
+            <h3>Chapter 5: Objects</h3>
+            <ul class="subnotes">
+                <li>If a property's value is a function, it is known as a method.</li>
+                <li>An object literal is an object that is created directly in the language by wrapping all its properties and methods in curly braces {}</li>
+                <li>Each property in the object is a key-value pair, separated by commas</li>
+                <li>const spiderman = new Object(); (using constructor function)</li>
+                <li>const spiderman = {}; (empty object)</li>
+                <li>Access the property using dot notation or bracket notation</li>
+                <li>The new Symbol date type can also be used as a computed property key</li>
+                <li>To call an object's method we can also use dot or bracket notation</li>
+                <li>The Object.keys() method will return an array of all the keys of any object</li>
+                <li>Object.values() returns an array of all the object's value</li>
+                <li>Object.entries() returns an array of key-value pair</li>
+                <li>Change the value of an objec's properties using assignment</li>
+                <li>Objects are assigned by reference</li>
+                <li>The parse() method takes a string of data in JSON format and returns a JavaScript object</li>
+                <li>The stringify() method does the opposite, taking a JavaScript object and returning a string of JSON data</li>
+            </ul> 
+
+            <br>
+            <h3>Chapter 6: Document Object Model</h3>
+            <ul class="subnotes">
+                <li>Use the Array.from() method or spread operator to turn a node list into an array</li>
+                <li>Once the node list has been turned into an array, we can use all the array methods on it.</li>
+                <li>getElementsByTagName() will return a live node list of all the elements with the tag name</li>
+                <li>getElementsByClassName() will return a live node list of all elements that have the class name</li>
+                <li>textContent returns the text content of an element as a string</li>
+                <li>Find the text contained inside the text node using the nodeValue method</li>
+                <li>getAttribute() method returns the value of the attribute</li>
+                <li>setAttribute changes the element’s attributes (two arguments)</li>
+                <li>The classList property is a list of all the classes an element</li>
+                <li>The add method is used to add a class to an element without overwriting any classes that already exist</li>
+                <li>createElement() method that takes a tag name as a parameter and returns that element</li>
+                <li>A text node can be created using the document.createTextNode() method</li>
+                <li>Every node object has an appendChild() method that will add another node</li>
+                <li>An element can be removed from a page using the removeChild() method</li>
+                <li>replaceChild() method can be used to replace one node with another. </li>
+            </ul> 
+
+            <br>
+            <h3>Chapter 7 Events</h3>
+            <ul class="subnotes">
+                <li>The click event occurs when a user clicks with the mouse, presses the Enter key, or taps the screen</li>
+                <li>inline event handlers are best avoided</li>
+                <li>The addEventListener() method is called on a node object, the node to which the event listener is being applied</li>
+                <li>dblclick event occurs when the user doubleclicks on the element to which the event listener is attached</li>
+                <li>touchstart event occurs when a user initially touches the surface</li>
+                <li>touchend event occurs when a user stops touching the surface</li>
+                <li>An event listener can be removed using the removeEventListener() method</li>
+                <li>Bubbling is when the event fires on the element clicked on first, then bubbles up the document tree, firing an event on each parent element until it reaches the root node</li>
+                <li>Capturing starts by firing an event on the root element, then propagates downwards, firing an event on each child element until it reaches the target element that was clicked on</li>
+            </ul> 
 
             <a class="home-button" href="https://djoko77.github.io/wdd330/">Go Back to Homepage</a>
         </main>
