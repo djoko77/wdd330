@@ -16,25 +16,17 @@ h1 {
 h2 {
     font-size: 1.5rem;
     text-align: left;
-    border-bottom: 1px solid #0076B6;
+    border-bottom: 1px solid #808080;
 }
 
 header, main, footer {
-    margin: 1.25rem auto;
-    padding: .5rem;
-    max-width: 800px;
+    padding: 0.5rem;
 }
 
 header, footer, footer a {
     text-align: center;
-    background-color: #0076B6;
+    background-color: #808080;
     color: whitesmoke;
-}
-
-header img {
-    width: 150px;
-    height: auto;
-    float: right;
 }
 
 p {
@@ -42,8 +34,17 @@ p {
 }
 
 footer {
-    font-size: smaller;
+    height: 100px;
+    line-height: 80px;
 }
+
+.home-img {
+background-image: url('/img/computer1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
 
 /* Week 1 */
 
@@ -68,7 +69,7 @@ button {
 }
 
 .home-button {
-    background-color: #0076B6;
+    background-color: #808080;
     color: white;
     padding: 5px 10px;
     text-align: center;
