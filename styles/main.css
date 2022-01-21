@@ -50,7 +50,7 @@ footer {
 
 .hero-img {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 
