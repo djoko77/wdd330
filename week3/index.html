@@ -80,13 +80,44 @@
                 <li>Capturing starts by firing an event on the root element, then propagates downwards, firing an event on each child element until it reaches the target element that was clicked on</li>
             </ul> 
 
+            <br>
+            <h2>CODING EXERCISES</h2>
+            <br>
+            <h3>Objects</h3>
+            <p>Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.</p>
+            <p><b>Sample object:</b>
+                var student = {
+                name : "David Rayy",
+                sclass : "VI",
+                rollno : 12 };</p>
+            <button onclick="showBefore()">Show the object properties</button>
+            <p id="show-result1"></p>
+            <button onclick="deleteProperty()">Click here to delete the rollno property and show the updated properties</button>
+            <p id="show-result2"></p>
+            <br>
+         
+            <h3>Document Object Model</h3>
+            <p id ='text'>JavaScript Exercises - w3resource</p>
+            <div>
+                <button id="jsstyle"
+                onclick="js_style()">By clicking this button the font, font size, and color will be changed</button>
+            </div>
+
+            <br>
+            <h3>Events</h3>
+            <p>This example uses the addEventListener() method to add many events on the same button.</p>
+            <button id="eventButton">Try it</button>
+            <p id="eventResult"></p>
+
+            <br>
+            <br>
             <a class="home-button" href="https://djoko77.github.io/wdd330/">Go Back to Homepage</a>
         </main>
         
         <footer>
                 <p>&copy;2021 Rombie Lagunzad - Philippines <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
         </footer>
-        <script src="../js/week2.js"></script>
+        <script src="../js/week3.js"></script>
     </body>
 
 </html>
