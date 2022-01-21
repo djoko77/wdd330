@@ -38,8 +38,12 @@ footer {
     line-height: 80px;
 }
 
+main {
+    padding: 2opx;
+    margin: 20px;
+}
 .home-img {
-background-image: url('/img/computer1.jpg');
+  background-image: url('/img/computer1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
 
