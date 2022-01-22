@@ -12,24 +12,12 @@
 
     <body>
         <header>
-            <h1><a class="header-link" href="https://djoko77.github.io/wdd330/">WDD 330 Web Frontend II Portfolio</a></h1>
+            <h1><a class="header-link" href="https://djoko77.github.io/wdd330/">WDD 330 Portfolio</a></h1>
         </header>
         <main>
-        
-            <h2>WEEK 1: STORY EDITOR</h2>
-            <br>
-            <h3>Story Name:</h3><input id="name_input"></input>
-            <section>
-                <button onclick="loadStory()">Find and Edit It</button>
-                <button onclick="saveStory()">Save It</button>
-                <button onclick="displayStory()">Display It</button>
-            </section>
-            <textarea id="story_editor" placeholder="Write a totally awesome story here"></textarea>
-            <section id="story_display"></section>
-
-            <br>
+            <div class="column">       
+                <div class="notes-section">
             <h2>NOTES</h2>
-            <br>
             <h3>Mobile First Experience</h3>
             <ul class="subnotes">
                 <li>Mobile traffic up 18.6% over 2013</li>
@@ -75,7 +63,20 @@
             <br>
             <h2>QUESTION</h2>
             <p>In reducing the website's loading speed in the mobile view, what is the best way to minify CSS and JS files? Do we need to use a tool or plugin?</p>
-            <br>
+            </div>
+            <div class="coding-section">
+                <h2>STORY EDITOR</h2>
+                <br>
+                <h3>Story Name:</h3><input id="name_input"></input>
+                <section>
+                    <button onclick="loadStory()">Find and Edit It</button>
+                    <button onclick="saveStory()">Save It</button>
+                    <button onclick="displayStory()">Display It</button>
+                </section>
+                <textarea id="story_editor" placeholder="Write a totally awesome story here"></textarea>
+                <section id="story_display"></section>
+            </div>
+            </div>
             <a class="home-button" href="https://djoko77.github.io/wdd330/">Go Back to Homepage</a>
         </main>
         

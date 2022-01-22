@@ -138,11 +138,12 @@ ol#activity {
 
 h3 {
     font-size: 22px;
+    margin-top: 20px;
 }
 
 textarea {
     padding: 10px 0;
-    width: 800px;
+    width: 600px;
     height: 250px;
     background-color: lightyellow;
 }
