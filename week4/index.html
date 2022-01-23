@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Week 4 Activity</title>
+        <meta name="description" content="week 3 activity">
+        <link rel="stylesheet" href="../styles/normalize.css">
+        <link rel="stylesheet" href="../styles/main.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><a class="header-link" href="https://djoko77.github.io/wdd330/">WDD 330 Portfolio</a></h1>
+        </header>
+        <main>
+            <div class="column">       
+                <div class="notes-section">
+                        <h2>WEEK 4 NOTES</h2>
+                        <br>
+
+                        <h3>Chapter 8: Forms</h3>
+                        <ul class="subnotes">
+                            <li>The legacy DOM had a useful property called document.forms that returns an HTML collection of all the forms</li>
+                            <li>A form object also has a method called elements that returns an HTML collection of all the elements contained in the form</li>
+                            <li>We can also access the form controls using their "name" attributes</li>
+                            <li>The form.reset() method will reset all the form controls back to their initial values</li>
+                            <li>A button with a type attribute of reset can also be used to reset the form</li>
+                            <li>The form.action property can be used to set the action attribute of a form</li>
+                            <li>Stop the form from being submitted to the URL altogether by using the preventDefault() method</li>
+                            <li>In select, the "selected" attribute can be used to set the initial value in the HTML</li>
+                            <li>Form validation is the process of checking whether a user has entered the information into a form correctly</li>
+                            <li>If the submit button is disabled (disabled property) then no action is taken when it's clicked</li>
+                        </ul> 
+
+                        <br>
+                        <h3>Chapter 12: Object-Oriented Programming in JavaScript</h3>
+                        <ul class="subnotes">
+                            <li>OOP – encapsulation, polymorphism, inheritance</li>
+                            <li>The parentheses are not required when instantiating a new object using a constructor function</li>
+                            <li>The static keyword can be used in class declarations to create a static method</li>
+                            <li>Static methods are not available to instances of the class</li>
+                            <li>All classes and constructor functions have a prototype property that returns an object</li>
+                            <li>Never use arrays or objects as a default value in prototype</li>
+                            <li>All objects ultimately inherit from the prototype of the Object() constructor function</li>
+                            <li>A class can inherit from another class using the extends keyword in a class declaration</li>
+                            <li>The keyword "super" refers to the parent class, and can be used to access any properties and call any methods of the parent class</li>
+                            <li>Polymorphism means that different objects can have the same method, but implement it in different ways</li>
+                            <li>Instead of using assignment, we can add properties to an object using the Object.defineProperty()</li>
+                            <li>A mixin is a way of adding properties and methods of some objects to another object without using inheritance</li>
+                            <li>Array.from() method can be used to turn an array-like object into an array</li>
+                            <li>Keep inheritance chains short in creating classs</li>
+                        </ul> 
+
+                        <br>
+                        <h3>Chapter 15: Modern JavaScript Development</h3>
+                        <ul class="subnotes">
+                            <li>A JavaScript library is a piece of code that provides several methods that make it easier to achieve common tasks</li>
+                            <li>A big advantage of using jQuery is its support for older browsers like Internet Explorer.</li>
+                            <li>Lodash can be thought of as a superset of Underscore as it does everything Underscore does</li>
+                            <li>A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other module</li>
+                            <li>A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module.</li>
+                            <li>MVC separates an application into three distinct, independent components that interact with each other: model, view, and controllers</li>
+                            <li>React and Vue.js both use the concept of a virtual DOM to speed up the process of updating HTML pages</li>
+                            <li>It is usually best to just install the latest version of a package</li>
+                            <li>Minification is the process of removing any unnecessary characters from your code to reduce the file size</li>
+                        </ul> 
+                    </div>
+
+                    <br>
+                    <div class="coding-section">
+                        <h2>CODING EXERCISES</h2>
+                        <br>
+                        <h3>Objects</h3>
+                    </div>
+                <br>
+                <br>
+            </div>
+            <a class="home-button" href="https://djoko77.github.io/wdd330/">Go Back to Homepage</a>
+        </main>
+        
+        <footer>
+                <p>&copy;2022 Rombie Lagunzad - Philippines <a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+        <script src="../js/week4.js"></script>
+    </body>
+
+</html>
