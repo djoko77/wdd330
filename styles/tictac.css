@@ -2,13 +2,18 @@ h1 {
     margin: 20px;
 }
 
+.player-notes {
+    margin: 20px;
+    font-size: 30px; 
+}
+
 table, th {
     border: 5px solid black;
 }
 
 table {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     margin: 20px;
     border-collapse: collapse;
 }
