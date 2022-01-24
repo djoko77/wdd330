@@ -143,6 +143,18 @@ ol li:hover {
     background-color: #333;
 }
 
+.columnA {
+    width: 500px;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.columnB {
+    width: 500px;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
 /* Week 1 */
 
 h3 {
