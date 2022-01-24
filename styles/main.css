@@ -116,13 +116,13 @@ footer p {
     font-size: 45px;
 }
 
-ol#activity {
+ol#activity, .challenges {
     list-style: none;
     margin: 20px 0;
     padding: 0;
 }
 
-.home-content ol a {
+ol a {
     text-decoration: none;
     font-family: 'robotoregular', Helvetica, sans-serif;
     color: whitesmoke;
@@ -130,15 +130,16 @@ ol#activity {
     font-size: 30px;
 }
 
-.home-content ol li {
+ol li {
     background-color: #808080;
     margin: 40px 0;
     padding: 20px;
     height: 80px;
     transition: 0.7s;
+    text-align: center;
 }
 
-.home-content ol li:hover {
+ol li:hover {
     background-color: #333;
 }
 

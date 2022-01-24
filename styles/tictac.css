@@ -116,3 +116,11 @@ p {
 .hide-message {
     display: none;
 }
+
+form {
+    margin: 40px;
+}
+
+main h1 {
+    margin: 40px;
+}
