@@ -13,24 +13,22 @@
     <body>
         <main>
             <h1>Tic Tac Toe</h1>
-            <table>
-                <tr>
-                    <th id="up-left"></th>
-                    <th id="up-mid"></th>
-                    <th id="up-right"></th>
-                </tr>
-                <tr>
-                    <th id="mid-left"></th>
-                    <th id="mid-mid"></th>
-                    <th id="mid-right"></th>
-                </tr>
-                <tr>
-                    <th id="down-left"></th>
-                    <th id="down-mid"></th>
-                    <th id="down-right"></th>
-                </tr>
-            </table>
-            <div class="player-notes">Player <span class="turn">1</span>'s Turn</div>
+            <form>
+                <div class="tictac">
+                    <div id="up-left" class="board"></div>
+                    <div id="up-mid" class="board"></div>
+                    <div id="up-right" class="board"></div>
+                    <div id="mid-left" class="board"></div>
+                    <div id="mid-mid" class="board"></div>
+                    <div id="mid-right" class="board"></div>
+                    <div id="down-left" class="board"></div>
+                    <div id="down-mid" class="board"></div>
+                    <div id="down-right" class="board"></div>
+                </div>
+                <h2 class="player-notes">Player <span id="player">X</span>'s Turn</h2>
+                <p id="result"></p>
+                <button onclick="resetBoard()">Reset</button> 
+            </form>
         </main>
         <script src="../js/week4.js"></script>
     </body>
