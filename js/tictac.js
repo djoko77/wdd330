@@ -1,5 +1,5 @@
 const game = new Map();
-document.querySelector('.tictac').addEventListener('click', (event) => {
+document.querySelector('.tictac').addEventListener('touchend', (event) => {
 
     if (document.getElementById('player').textContent === "X") {
             document.getElementById(event.target.id).innerHTML = "X"

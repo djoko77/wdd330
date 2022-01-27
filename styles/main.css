@@ -209,3 +209,9 @@ button {
 input {
     font-family: 'robotoregular', Helvetica, sans-serif;
 }
+
+/* @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+} */
