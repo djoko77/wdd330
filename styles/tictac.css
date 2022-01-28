@@ -119,12 +119,6 @@ th:nth-child(2) {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 150px;
-    transition: 0.5;
-}
-
-.board:hover {
-    background-color: yellow;
-    opacity: 0.3;
 }
 
 .tictac {
