@@ -192,26 +192,13 @@ footer p {
 }
 
 h2 {
-    margin-left: 20px;
+    margin: 20px;
     padding-left: 20px;
     font-size: 1.7rem;
     text-align: left;
     border-bottom: 1px solid #808080;
     font-family: 'robotoregular', Helvetica, sans-serif;
 }
-
-
-h2 {
-    font-size: 1.7rem;
-    text-align: left;
-    border-bottom: 1px solid #808080;
-}
-
-h2 {
-    margin: 20px 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 
 /* MOBILE VIEW */
 
@@ -256,6 +243,10 @@ h2 {
         width: 200px;
         font-size: 15px;
         padding: 10px;
+    }
+
+    footer p {
+        font-size: 16px;
     }
 
 }
