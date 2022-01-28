@@ -250,5 +250,9 @@ input {
     ol a {
         font-size: 25px;
     }
+
+    .home-content {
+        top: 50px;
+    }
     
 }
