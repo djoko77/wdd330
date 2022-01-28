@@ -30,12 +30,6 @@ h1 {
     font-size: 3rem;
 }
 
-h2 {
-    font-size: 1.7rem;
-    text-align: left;
-    border-bottom: 1px solid #808080;
-}
-
 header, footer {
     padding: 0.5rem;
 }
@@ -80,10 +74,6 @@ footer p {
     text-transform: uppercase;
 }
 
-h2 {
-    margin: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 .player-notes {
     margin: 20px;
@@ -141,7 +131,7 @@ th:nth-child(2) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 500px;
+    max-width: 500px;
     margin: 20px;
 }
 
@@ -207,6 +197,26 @@ footer p {
     margin: 0;
 }
 
+h2 {
+    margin-left: 20px;
+    padding-left: 20px;
+    font-size: 1.7rem;
+    text-align: left;
+    border-bottom: 1px solid #808080;
+    font-family: 'robotoregular', Helvetica, sans-serif;
+}
+
+
+h2 {
+    font-size: 1.7rem;
+    text-align: left;
+    border-bottom: 1px solid #808080;
+}
+
+h2 {
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 
 /* MOBILE VIEW */
@@ -214,18 +224,44 @@ footer p {
 @media only screen and (min-width:300px) and (max-width: 600px) {
   
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 
+    h2 {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 20px;
+    }
+
     .tictac {
-        width: 500px;
+        max-width: 300px;
         margin: 10px;
     }
 
     .board { 
-        height: 120px;
-        width: 120px;
+        height: 60px;
+        width: 60px;
+        font-size: 50px;
+        line-height: 60px;
     }
-    
+
+    main {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .player-notes {
+        font-size: 20px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    button {
+        margin: auto;
+        width: 200px;
+        font-size: 15px;
+        padding: 10px;
+    }
+
 }
