@@ -203,6 +203,10 @@ main h1 {
     margin: 40px;
 }
 
+footer p {
+    margin: 0;
+}
+
 
 
 /* MOBILE VIEW */
