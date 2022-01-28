@@ -209,9 +209,6 @@ input {
     font-family: 'robotoregular', Helvetica, sans-serif;
 }
 
-/* footer p:nth-child(2) {
-padding-top: 0;
-} */
 
 /* MOBILE VIEW */
 
@@ -247,7 +244,6 @@ padding-top: 0;
     ol li {
         height: 70px;
     }
-
 
     ol a {
         font-size: 25px;
