@@ -68,7 +68,7 @@ p {
 
 footer {
     height: 100px;
-    line-height: 60px;
+    padding: 10px;
 }
 
 footer p {
@@ -155,7 +155,6 @@ ol li:hover {
     padding-left: 20px;
 }
 
-/* Week 1 */
 
 h3 {
     font-size: 22px;
@@ -210,8 +209,48 @@ input {
     font-family: 'robotoregular', Helvetica, sans-serif;
 }
 
-/* @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
+/* footer p:nth-child(2) {
+padding-top: 0;
 } */
+
+/* MOBILE VIEW */
+
+@media only screen and (min-width:300px) and (max-width: 800px) {
+    .column {
+        display: block;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .notes-section,.coding-section {
+        width: 550px;
+    }
+
+    .columnA {
+        width: 450px;
+        margin-right: 0;
+        padding-right: 0;
+    }
+    
+    .columnB {
+        width: 450px;
+        margin-left: 0;
+        padding-left: 0;
+    } 
+
+    .banner-title {
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    ol li {
+        height: 70px;
+    }
+
+
+    ol a {
+        font-size: 25px;
+    }
+    
+}

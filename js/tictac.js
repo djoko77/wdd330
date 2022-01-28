@@ -1,23 +1,23 @@
 const game = new Map();
-document.querySelector('.tictac').addEventListener('touchend', (event) => {
+document.querySelector('.tictac').addEventListener('click', (event) => {
 
     if (document.getElementById('player').textContent === "X") {
             document.getElementById(event.target.id).innerHTML = "X"
             document.getElementById("player").innerHTML = "O"
-            game.set(event.target.id, "X")
+            game.set(event.target.id, "X");
             gameStatus()
         }
     else {
         document.getElementById(event.target.id).innerHTML = "O"
         document.getElementById("player").innerHTML = "X"
         game.set(event.target.id, "O")
-        gameStatus()
+        gameStatus();
    }
  // console.log(game);            
 });
 
 function gameStatus() {
-    
+
     if (game.get("up-left") === "X" && game.get("up-mid")  === "X" && game.get("up-right")  === "X" ) {
          document.getElementById("result").innerHTML = "Player X Wins! Congratulation!"
     }

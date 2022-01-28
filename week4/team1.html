@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+<style>
+ table td {
+border: 1px solid black;
+width: 100px;
+height: 100px;
+}
+
+table {
+border-collapse: collapse;
+margin: 100px auto;
+}
+
+table tr:nth-child(1) td{
+border-top: none;
+}
+
+table tr:nth-child(3) td {
+border-bottom: none;
+}
+
+table tr td:nth-child(1) {
+border-left: none;
+}
+
+table tr td:last-child {
+border-right: none;
+}
+
+td {
+text-align: center;
+font-size: 35px;
+font-family: "Dongle";
+cursor: pointer;
+}
+
+button {
+width: 100px;
+height: 50px;
+border-radius: 5px;
+background-color: chartreuse;
+border: none;
+cursor: pointer;
+}   
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td id="one"></td>
+<td id="two"></td>
+<td id="three"></td>
+</tr>
+<tr>
+<td id="four"></td>
+<td id="five"></td>
+<td id="six"></td>
+</tr>
+<tr>
+<td id="seven"></td>
+<td id="eight"></td>
+<td id="nine"></td>
+</tr>
+</table>
+<h1 id="result"></h1>
+
+<button class="reset">Reset</button>
+
+<script>
+    /* When a cell is touched it should add either an 'X or an 'O',
+depending on whether it is player 1 or player 2's turn. */
+
+const cells = document.querySelectorAll("td");
+let player = "O";
+
+const resetBtn = document.querySelector(".reset");
+
+const cell1 = document.getElementById("one").innerText;
+const cell2 = document.getElementById("two").innerText;
+const cell3 = document.getElementById("three").innerText;
+const cell4 = document.getElementById("four").innerText;
+const cell5 = document.getElementById("five").innerText;
+const cell6 = document.getElementById("six").innerText;
+const cell7 = document.getElementById("seven").innerText;
+const cell8 = document.getElementById("eight").innerText;
+const cell9 = document.getElementById("nine").innerText;
+
+let winner;
+
+function handlePlayerTurn(player) {
+if (player == "O") {
+player = "X"
+}
+else {
+player = "O"
+}
+return player
+}
+
+function checkrow() {
+if (cell1 == "X" && cell2 == "X" && cell3 == "X"){
+console.log(cell1)
+document.getElementById("result").innerHTML = "Player X Wins! Congratulation!"
+}
+
+else if (cell4 == "X" && cell5 == "X" && cell6 == "X"){
+winner = true
+}
+
+else if (cell7 == "X" && cell8 == "X" && cell9 == "X"){
+winner = true
+}
+
+return winner
+}
+
+function checkWinner() {
+winner = checkrow();
+if (winner) {
+console.log("there is a winner");
+}
+
+}
+
+
+
+cells.forEach(cell => {
+cell.addEventListener("click", function(event){ // this will make sure that the player doesn't go to a taken cell
+if (cell.textContent != "") {
+}
+else {
+// handle player turn
+player = handlePlayerTurn(player);
+
+// update the cell content
+cell.innerHTML = player;
+}
+checkWinner()
+})
+});
+
+// When touched the reset button should remove all of the marks from the board.
+resetBtn.addEventListener("click", function() {
+cells.forEach(cell => {
+cell.textContent = "";
+});
+})
+</script>
+</body>
+</html>
