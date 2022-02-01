@@ -243,12 +243,13 @@ input {
     }
     
     ol li {
-        height: 70px;
+        height: 50px;
         max-width: 300px;
+        line-height: 10px;
     }
 
     ol a {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .home-content {
