@@ -25,7 +25,7 @@ export default class Todos {
  /* Add a method to the Todos class called addTodo. It should grab the input in the html where users enter the text of the task, then send that along with the key to a SaveTodo() function. Then update the display with the current list of tasks */  
    
         listTodos() {
-            renderTodoList(this.list, qs('#all-tasks')[0]);
+            renderTodoList(this.list, qs('#tasks-lists')[0]);
         }
 
         completeTodo(todo) {
@@ -60,7 +60,7 @@ export default class Todos {
                     //saveTodo(timestamp, todo);
                     //saveTodo(this.key, list);
                     saveTodo(task, this.key);
-                    this.loadList();
+                    //this.loadList();
                     this.listTodos();
         }
             
@@ -101,6 +101,8 @@ function saveTodo(task, key) {
   * @return {array}     The value as an array of objects
  */
 function getTodos(key) { 
+
+    
     var todoList = readFromLS(key)
 	return todoList ? todoList : [];
 }
@@ -126,7 +128,6 @@ function renderTodoList(list, element) {
 
     });
 }
-
 
 
 

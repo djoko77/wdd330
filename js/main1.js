@@ -13,27 +13,22 @@ import Todos from './Todos.js';
 //     console.log("click successful")
 // })
 
-const controller = {
+// const controller = {
 
-    load() {
-      this.todoList = new Todos();
-      let that = this;
-      window.addEventListener('load', () => {
-        that.todoList.loadList();
-        that.todoList.listTodos();
-      });
+//     load() {
+//       this.todoList = new Todos();
+  
+//       onTouch('.task-button', () => {
+//         this.todoList.addTodo();
+//       });
+//     }
+//   }
+
+   const todoList = new Todos();
+  
       onTouch('.task-button', () => {
-        that.todoList.addTodo();
-      });
-      // qs('form')[0].addEventListener('submit', (event) => {
-      //     event.preventDefault();
-      //     that.todoList.addTodo();
-      // });
-    }
-  }
-
-
-
+        todoList.addTodo();
+      })
 // const controller = {
 //   //on load grab the array and insert it into the page
 //   load() {
@@ -53,6 +48,6 @@ const controller = {
 //   }
 // }
 
- controller.load();
+//  controller.load();
 
 //  todoList = new Todos();
