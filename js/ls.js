@@ -16,12 +16,19 @@ function removeFromLS(id) {
 
 // Read from the local storage and count the tasks
 function readFromLS() {
-    const todoListString = localStorage.getItem('toDoList');
+    const todoListText = localStorage.getItem('toDoList');
     let todoList = [];
-    todoList = JSON.parse(todoListString);
+
+    if(todoListText) {
+    todoList = JSON.parse(todoListText);
     utilities.qs('#tasks-number')[0].innerText = todoList.filter(
         todo => todo.completed === false
     ).length;
+    }
+    else if (todoList == undefined || todoList == null){
+        localStorage.clear();
+        todoList = JSON.parse(todoListText);
+    }
     return todoList;
 }
 
