@@ -4,24 +4,24 @@ import utilities from './utilities.js';
 // Display the task lists
 listTodos();
 
-utilities.onTouch('#add-button', () => {
-    newTodo();
-    location.reload();
-})
+// utilities.onTouch('#add-button', () => {
+//     newTodo();
+//     location.reload();
+// })
+// // utilities.onTouch('#all', () => {
+// //     filterTasks();
+// // })
+// // utilities.onTouch('#active', () => {
+// //     filterTasks();
+// // })
+// // utilities.onTouch('#completed', () => {
+// //     filterTasks();
+// // })
 
-// utilities.onTouch('#all', () => {
-//     filterTasks();
-// })
-// utilities.onTouch('#active', () => {
-//     filterTasks();
-// })
-// utilities.onTouch('#completed', () => {
-//     filterTasks();
-// })
-
-document.querySelector('#active').onclick = filterTasks;
-document.querySelector('#all').onclick = filterTasks;
-document.querySelector('#completed').onclick = filterTasks;
+utilities.qs('#add-button')[0].onclick = newTodo;
+utilities.qs('#active')[0].onclick = filterTasks;
+utilities.qs('#all')[0].onclick = filterTasks;
+utilities.qs('#completed')[0].onclick = filterTasks;
 
 function newTodo() {
     const todo = createTodo();
