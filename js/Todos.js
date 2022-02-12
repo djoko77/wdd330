@@ -4,8 +4,21 @@ import utilities from './utilities.js';
 // Display the task lists
 listTodos();
 
-// Add event listener
-document.querySelector('#add-button').onclick = newTodo;
+utilities.onTouch('#add-button', () => {
+    newTodo();
+    location.reload();
+})
+
+// utilities.onTouch('#all', () => {
+//     filterTasks(true);
+// })
+// utilities.onTouch('#active', () => {
+//     filterTasks(true);
+// })
+// utilities.onTouch('#completed', () => {
+//     filterTasks(true);
+// })
+
 document.querySelector('#active').onclick = filterTasks;
 document.querySelector('#all').onclick = filterTasks;
 document.querySelector('#completed').onclick = filterTasks;
@@ -35,10 +48,11 @@ function createTodoElement(todo) {
         const liContent = document.createElement('li');
         liContent.classList.add('single-todo');
 
-        // Button to click if task is completed
+        // Button to click if the task is completed
         const doneButton = document.createElement('button');
         doneButton.setAttribute('data-id', todo.id);
         doneButton.classList.add('checklist');
+        doneButton.type = "checkbox"
         doneButton.innerHTML = '&#9633;';
         doneButton.onclick = taskCompletion;
 
@@ -49,6 +63,7 @@ function createTodoElement(todo) {
         if(todo.completed == true) {
             taskName.style.color = "#808080";
             taskName.style.setProperty('text-decoration', 'line-through');
+            doneButton.innerHTML = '&#10003;';
         }
 
         // The X button to remove the task
@@ -72,12 +87,6 @@ function addToList(liContent) {
     utilities.qs('#error-message')[0].innerHTML = "";
     utilities.qs('#add-task')[0].style.border = "1px solid black";
     // location.reload(); 
-    window.onload = function() {
-        if(!window.location.hash) {
-            window.location = window.location + '#loaded';
-            window.location.reload();
-        }
-    }
 }
 
 function listTodos() {
@@ -102,18 +111,19 @@ function taskCompletion(target) {
     listTodos();
 }
 
-function filterTasks(status) {
+function filterTasks(data) {
     utilities.qs('#tasks-lists')[0].innerHTML = '';
     let filteredTasks = [];
+
     const allTasks = ls.readFromLS();
 
-    if (status.currentTarget.id == 'completed') {
+    if (data.currentTarget.id == 'completed') {
         filteredTasks = utilities.completed(allTasks);
     }
-    else if (status.currentTarget.id == 'active') {
+    else if (data.currentTarget.id == 'active') {
         filteredTasks = utilities.active(allTasks);
     }
-    else {
+    else if (data.currentTarget.id == 'all') {
         filteredTasks = allTasks;
     }
 

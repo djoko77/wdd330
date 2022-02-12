@@ -19,7 +19,7 @@ for the element to attach the listener to
 
 */
 function onTouch(elementSelector, callback) { 
-  var elements = qs(elementSelector);
+  let elements = qs(elementSelector);
   elements.forEach( element => {
   element.addEventListener('touchend', callback);
   element.addEventListener('click', callback);

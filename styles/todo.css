@@ -85,10 +85,9 @@ footer p {
 h2 {
     margin: 20px;
     padding-left: 20px;
-    font-size: 1.7rem;
+    font-size: 3rem;
     text-align: left;
-    border-bottom: 1px solid #808080;
-    font-family: 'robotoregular', Helvetica, sans-serif;
+    font-family: 'aqua_grotesqueregular', Helvetica, sans-serif;
 }
 
 .single-todo, .lower-section {
@@ -99,28 +98,37 @@ h2 {
     justify-content: space-between;
 }
 
-.lower-section {
-    margin: 0 40px;
-}
-
 form input {
     height: 50px;
     width: 450px;
     margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'robotoregular', Helvetica, sans-serif;
 }
 
-.single-todo > input {
-    margin: 10px;
-    height: 30px;
-    width: 30px;
+.checklist {
     cursor: pointer;
+    font-size: 30px;
+    transform: scale(1.5, 1.5);
+    background: none;
+    border: none;
+    margin: 0 10px;
+    padding-bottom: 10px;
+    color: #333;
 }
 
-.single-todo > button {
-    border: none;
-    background: none;
-    font-size: 30px;
-    padding: 10px;
+.remove-button {
+    background: #333;
+    color: whitesmoke;
+    font-size: 16px;
+    height: 30px;
+    padding: 5px;
+    margin: 15px 5px 10px 5px;
+    transition: 0.7s;
+}
+
+.remove-button:hover {
+    background: #808080;
 }
 
 .single-todo > label {
@@ -136,7 +144,10 @@ form input {
 }
 
 .lower-section {
-    margin-bottom: 40px;
+    margin: 0 40px;
+    background: #808080;
+    height: 70px;
+    font-family: 'robotoregular', Helvetica, sans-serif;
 }
 
 .active {
@@ -151,13 +162,32 @@ form input {
 }
 
 #add-button {
-    border: solid 1px black;
+    background: #333;
+    color: whitesmoke;
     width: 40px;
-    font-size: 30px;
+    font-size: 40px;
     height: 50px;
     text-align: center;
-    padding: 5px;
+    padding: 7px;
     cursor: pointer;
+    transform: .7s;
+}
+
+#add-button:hover {
+    background: #808080;
+    color: whitesmoke;
+}
+
+.all-task {
+    font-weight: 1000;
+    color: whitesmoke;
+}
+
+.filter-button {
+    margin: 10px;
+    width: 80px;
+    height: 50px;
+    color: #333;
 }
 
 .done {
@@ -174,6 +204,25 @@ form {
     justify-content: space-between;
 }
 
+main {
+    min-height: 600px;
+    padding: 20px 0;
+    background-image: url(/img/computer1.jpg);
+}
+
+.todo-app {
+    background: whitesmoke;
+    width: 600px;
+    min-height: 500px;
+    margin: 50px;
+    opacity: .85;
+    outline: solid 2px black;
+    outline-offset: -15px;
+}
+
+.task-list {
+    padding-bottom: 30px;
+}
 
 /* MOBILE VIEW */
 
