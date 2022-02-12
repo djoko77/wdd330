@@ -207,7 +207,7 @@ form {
 main {
     min-height: 600px;
     padding: 20px 0;
-    background-image: url(/img/computer1.jpg);
+    background-image: url(../img/computer1.jpg);
 }
 
 .todo-app {
