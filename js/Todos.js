@@ -13,6 +13,7 @@ utilities.qs('#active')[0].onclick = filterTasks;
 utilities.qs('#all')[0].onclick = filterTasks;
 utilities.qs('#completed')[0].onclick = filterTasks;
 
+// Initiate building of the object, appending the contents, and saving it to the local storage
 function newTodo() {
     const todo = createTodo();
     const liContent = createTodoElement(todo);
@@ -20,14 +21,16 @@ function newTodo() {
     ls.writeToLS(todo);
 }
 
+// Grab the input from the user to create the object 
 function createTodo() {
     let input = utilities.qs("#add-task")[0];
     let addTask = input.value;
-    // console.log(JSON.stringify(addTask));
     const newTask = {id: Date.now(), content: addTask, completed: false}
+    // console.log(JSON.stringify(newTask));
     return newTask;
 }
 
+// Create the structure and content of the the li element
 function createTodoElement(todo) {
     if(todo.content == '') {
         utilities.qs('#error-message')[0].innerHTML = "Input is blank. Please enter a task";
