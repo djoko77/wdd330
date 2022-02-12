@@ -25,7 +25,7 @@ function readFromLS() {
     return todoList;
 }
 
-// Update the sstatus of the specific task to complete
+// Update the status of the specific task to complete
 function taskCompleted(id) {
     const toDoList = readFromLS();
     toDoList.forEach(todo => {
