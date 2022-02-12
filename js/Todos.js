@@ -10,13 +10,13 @@ utilities.onTouch('#add-button', () => {
 })
 
 // utilities.onTouch('#all', () => {
-//     filterTasks(true);
+//     filterTasks();
 // })
 // utilities.onTouch('#active', () => {
-//     filterTasks(true);
+//     filterTasks();
 // })
 // utilities.onTouch('#completed', () => {
-//     filterTasks(true);
+//     filterTasks();
 // })
 
 document.querySelector('#active').onclick = filterTasks;
