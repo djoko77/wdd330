@@ -26,12 +26,14 @@ function onTouch(elementSelector, callback) {
 });
 }
 
+// Filter the todos (not completed)
 function active(todos) {
   return todos.filter(todo => {
       return todo.completed == false;
   })
 }
 
+// Filter the todos (completed)
 function completed(todos) {
   return todos.filter(todo => {
       return todo.completed == true;
