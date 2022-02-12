@@ -4,9 +4,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>Todo Challenge | Rombie B. Lagunzad | BYU-Idaho</title>
+        <title>Todo Challenge</title>
         <meta name="description" content="WDD 330 Portfolio of Rombie, a student in WDD 330: Web Frontend Development II at Brigham Young University-Idaho.">
         <link rel="stylesheet" href="../styles/todo.css">
+        <script type="module" src="../js/ToDos.js"></script>
     </head>
 
     <body>
@@ -27,29 +28,26 @@
                         <button>X</button>
                     </li> -->
                     <div class="lower-section">
-                        <div class="all-task"><span id="tasks-number">0</span> Task/s Left</div>
-                        <button class="active">All</button>
-                        <button>Active</button>
-                        <button>Completed</button>
+                        <div class="all-task"><span id="tasks-number"></span> Task/s Left</div>
+                        <button id="all" class="filter-button active-page">All</button>
+                        <button id="active"  class="filter-button">Active</button>
+                        <button id="completed" class="filter-button">Completed</button>
                     </div>
             
                     <div class="add-tasks-section">
                         <form>
                             <input type="text" id="add-task">
-                            <button class="task-button">+</button>
+                            <div id="add-button">+</div>
                         </form>
+                        <p id="error-message"></p>
                     </div>
-           
                 </div>
-           
-
         </main>
         
         <footer>
                 <p>&copy;2022 Rombie Lagunzad - Philippines</p>
                 <p><a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
         </footer>
-        <script type="module" src="../js/main1.js"></script>
     </body>
 
 </html>
