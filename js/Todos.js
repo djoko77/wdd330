@@ -4,21 +4,11 @@ import utilities from './utilities.js';
 // Display the task lists
 listTodos();
 
-// utilities.onTouch('#add-button', () => {
-//     newTodo();
-//     location.reload();
-// })
-// // utilities.onTouch('#all', () => {
-// //     filterTasks();
-// // })
-// // utilities.onTouch('#active', () => {
-// //     filterTasks();
-// // })
-// // utilities.onTouch('#completed', () => {
-// //     filterTasks();
-// // })
-
-utilities.qs('#add-button')[0].onclick = newTodo;
+// Event listeners and onclick
+utilities.onTouch('#add-button', () => {
+    newTodo();
+    location.reload();
+})
 utilities.qs('#active')[0].onclick = filterTasks;
 utilities.qs('#all')[0].onclick = filterTasks;
 utilities.qs('#completed')[0].onclick = filterTasks;
@@ -82,13 +72,15 @@ function createTodoElement(todo) {
     }
 }
 
+// Append the todo lists to the section where it should be add
+// Also restore the styling of the input and removing the error message
 function addToList(liContent) {
     utilities.qs('#tasks-lists')[0].appendChild(liContent);
     utilities.qs('#error-message')[0].innerHTML = "";
     utilities.qs('#add-task')[0].style.border = "1px solid black";
-    // location.reload(); 
 }
 
+// Grab all the todos from the local storage and display it
 function listTodos() {
     const todoList = ls.readFromLS();
     todoList.forEach(element => {
@@ -97,6 +89,7 @@ function listTodos() {
     })
 }
 
+// Get the target todo and delete it
 function removeTask(target) {
     const targetButton = target.currentTarget;
     ls.removeFromLS(targetButton.getAttribute('data-id'));
@@ -104,6 +97,7 @@ function removeTask(target) {
     listTodos();
 }
 
+// Get the target todo and toggle it as complete
 function taskCompletion(target) {
     const targetButton = target.currentTarget;
     ls.taskCompleted(targetButton.getAttribute('data-id'));
@@ -111,6 +105,7 @@ function taskCompletion(target) {
     listTodos();
 }
 
+// Filtering function to group the todos according to their status
 function filterTasks(data) {
     utilities.qs('#tasks-lists')[0].innerHTML = '';
     let filteredTasks = [];
