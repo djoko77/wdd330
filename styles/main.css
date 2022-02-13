@@ -219,7 +219,6 @@ input {
     }
     h1 {
         font-size: 1.5rem;
-        text-align: center;
     }
     .notes-section,.coding-section {
         max-width: 300px;
