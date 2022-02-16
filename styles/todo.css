@@ -150,8 +150,13 @@ form input {
     font-family: 'robotoregular', Helvetica, sans-serif;
 }
 
-.active {
-    border: solid 1px black;
+.lower-section .active-page {
+    background: #333;
+    color: whitesmoke;
+}
+
+.lower-section .active-page:hover {
+    background: #36454F;
 }
 
 .add-tasks-section {

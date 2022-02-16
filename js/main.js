@@ -26,6 +26,11 @@ function createList() {
             label: "Week 5 Notes",
             url: "week5/index.html"
         }
+        ,
+        {
+            label: "Week 7 Notes",
+            url: "week7/index.html"
+        }
     ];
 
         //  For each of the items in the array of links

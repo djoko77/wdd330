@@ -1,3 +1,6 @@
+import ls7 from './ls7';
+
+
 // Example of using Classes and modules to organize the code needed to render our list of hikes. Not using MVC here.
 
 //create an array of hikes
@@ -152,7 +155,32 @@ const hikeList = [
   <h3>Directions</h3>
   <p>${hike.directions}</p>
   </div>
+  <div>
+  <h3>Comments</h3>
+  <p></p>
+  </div>
   </div>`;
   return item;
   }
   
+  // getAllComments
+function getAllComments() {
+      const allComments = ls7.readFromLS()
+      allComments.forEach(element => {
+      const list = createComment
+
+  })
+}
+
+// function listTodos() {
+//   const todoList = ls.readFromLS();
+//   todoList.forEach(element => {
+//       const list = createTodoElement(element)
+//       addToList(list);
+//   })
+// }
+
+  //  renderCommentList
+  // function renderCommentList(comment) {
+  //   const commentList = document.createElement("div");
+  //   commentList = `<h2>${hike.name}</h2>

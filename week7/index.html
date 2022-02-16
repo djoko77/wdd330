@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Week 7 Activity</title>
+        <meta name="description" content="week 7 activity">
+        <link rel="stylesheet" href="../styles/normalize.css">
+        <link rel="stylesheet" href="../styles/main.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><a class="header-link" href="https://djoko77.github.io/wdd330/">WDD 330 Portfolio</a></h1>
+        </header>
+        <main>
+            <div class="column">       
+                <div class="notes-section">
+                        <h2>WEEK 7 NOTES</h2>
+                        <br>
+                        <h3>Chapter 11: Further Functions</h3>
+                        <ul class="subnotes">
+                            <li>Functions are first-class objects: they can be passed around</li>
+                            <li>Immediately Invoked Function Expression (IIFE)– is an anonymous function which is invoked as soon as it’s defined</li>
+                            <li>IFFE is achieved by placing parentheses at the end of the function definition</li>
+                            <li>temp variable only exists while the IIFE is invoked: const temp = a;</li>
+                            <li>Lazy Definition Pattern is often used when some initialization code is required the first time it’s invoked</li>
+                            <li>Recursive function invokes itself until a certain condition is met</li>
+                            <li>Callback function is passed to other functions as arguments and then invoked inside the function they are passed to</li>
+                            <li>JavaScript event-loop does not block the rest of the program from running</li>
+                            <li>Callback hell is the term used to refer to this tangled mess of code</li>
+                            <li>A promise represents the future result of an asynchronous operation</li>
+                            <li>Resolved ― the asynchronous operation was completed successfully</li>
+                            <li>Rejected ― the asynchronous operation didn’t work as expected, wasn't successfully completed or resulted in an error</li>
+                            <li>If each function that performs an asynchronous operation returns a promise, we can chain the then() methods together to form a sequential piece of code</li>
+                            <li>Async functions allow you to write asynchronous code as if it was synchronous by using the await operator before an asynchronous function</li>
+                            <li>The await operator will ensure the next line of code is not executed</li>
+                            <li>A closure is a reference to a variable that was created inside the scope of another function</li>
+                            <li>In using a pure function, the return value of a pure function should only depend on the values provided as arguments, no side-effect, and allows referential transparency.</li>
+                            <li>Higher-order functions are functions that accept another function as an argument, or return another function as a result, or both</li>
+                            <li>Currying is a process that involves the partial application of functions. A function is said to be curried when not all arguments have been supplied to the function.</li>
+                        </ul> 
+                        <br>
+                        <h3>Chapter 13; AJAX</h3>
+                        <ul class="subnotes">
+                            <li>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading</li>
+                            <li>Application programming interface (API) is a collection of methods that allows external access to another program or service.</li>
+                            <li>The Fetch API provides a global fetch() method that only has one mandatory argument, which is the URL of the resource you wish to fetch</li>
+                            <li>The text() method takes a stream of text from the response, reads it to completion and then returns a promise that resolves to a USVSting object that can be treated as a string in JavaScript.</li>
+                            <li>The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object</li>
+                            <li>The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax.</li>
+                        </ul> 
+                </div>
+                    <br>
+                    <div class="coding-section">
+                        <h2>CODING EXERCISES</h2>
+                        <br>
+                        <h3>Retry</h3>
+                        <p>Say you have a function primitiveMultiply that in 20 percent of cases multiplies two numbers 
+                            and in the other 80 percent of cases raises an exception of type MultiplicatorUnitFailure. 
+                            Write a function that wraps this clunky function and just keeps trying until a call succeeds, 
+                            after which it returns the result.</p>
+                        <button onclick="showMultiply()">Multiply 8 and 6</button>
+                        <br>
+                        <br>
+                        <h3>Using debugger Keyword</h3>
+                        <p>Check the debugger tab of the browser</p>
+                        <p>Are you eligible to vote?</p>
+                        <input id="ageYears" placeholder="Please Enter Your Age"></input>
+                        <button onclick="vote()">Check it!</button>
+                        <p id="prompt"></p>
+                    </div>
+                <br>
+                <br>
+            </div>
+            <a class="home-button" href="https://djoko77.github.io/wdd330/">Go Back to Homepage</a>
+        </main>
+        
+        <footer>
+            <p>&copy;2022 Rombie Lagunzad - Philippines</p>
+            <p><a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+        <script src="../js/week5exercise.js"></script>
+    </body>
+
+</html>

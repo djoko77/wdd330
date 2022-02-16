@@ -13,7 +13,7 @@ utilities.qs('#active')[0].onclick = filterTasks;
 utilities.qs('#all')[0].onclick = filterTasks;
 utilities.qs('#completed')[0].onclick = filterTasks;
 
-// Initiate building of the object, appending the contents, and saving it to the local storage
+// Initiate building of the object, appending the contents, and saving the todo object to the local storage
 function newTodo() {
     const todo = createTodo();
     const liContent = createTodoElement(todo);
