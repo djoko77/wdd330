@@ -1,5 +1,4 @@
-import ls7 from './ls7';
-
+import comment from './comment.js';
 
 // Example of using Classes and modules to organize the code needed to render our list of hikes. Not using MVC here.
 
@@ -66,18 +65,34 @@ const hikeList = [
   
   // Add class name hideButton to hide the button
   this.backButton.classList.add('hideButton');
+  comment.getAllComments();
   }
   
   // Function to display the full details of one hiking location
   showOneHike(hikeName) {
   
+  //const filteredComment =  this.filterCommentsByName(hikeName);
   const hike = this.getHikeByName(hikeName);
   this.parentElement.innerHTML = '';
   this.parentElement.appendChild(renderOneHikeFull(hike));
   
   // Remove the class name of the button to make the button visible
   this.backButton.classList.remove('hideButton')
+
+  // var element = document.querySelector("#add-button");
+  // // // console.log(JSON.stringify(element));
+  
+  // element.addEventListener('click', addComment());
+
+
+    var element = document.querySelector("#add-button");
+  // // // console.log(JSON.stringify(element));
+  // element.addEventListener('click', callback );
+
+  document.querySelector("#add-button").onclick = addComment;
+  
   }
+  
   
   // Add the click event for each child element so that if the section is clicked it will run showOneHike() to display full details
   addHikeListener() {
@@ -85,7 +100,9 @@ const hikeList = [
   listArray.forEach(child => {
   child.addEventListener('click', event => {
   this.showOneHike(event.currentTarget.dataset.name); // currentTarget returns whose event listener's callback is currently invoked
-  console.log(event.currentTarget.dataset.name) // Test the data to be passed
+
+  //console.log(event.currentTarget.dataset.name) // Test the data to be passed
+
   });
   });
   }
@@ -97,6 +114,7 @@ const hikeList = [
   // Add click event to the back button to display the original lists of hikes
   backButton.addEventListener('click', () => {
   this.showHikeList();
+
   });
   
   // Add class name 'hideButton' to the button to hide it if the original lists of hikes view is displayed
@@ -105,6 +123,16 @@ const hikeList = [
   return backButton;
   }
   }
+
+  // Grab comments input 
+function addComment() {
+  let commentText = document.getElementById("input-comment").value;
+  let hikeName = document.getElementById("add-button").attributes["name"].value;
+   //console.log(hikeName);
+  const newComment = {name: hikeName, date: Date.now(), content: commentText, type: 'hike'}
+  //console.log(JSON.stringify(newComment));
+  comment.writeToLS(newComment);
+}
   
   // Function to compile each rendered li and display all of them in one page
   function renderHikeList(parent, hikes) {
@@ -134,6 +162,10 @@ const hikeList = [
   // Function to create the structure the full view of the clicked hiking location
   function renderOneHikeFull(hike) {
   // alert('got here');
+
+  const filteredComments =  comment.filterCommentsByName(hike.name);
+  //alert(JSON.stringify(filteredComments))
+
   const item = document.createElement("li");
   item.classList.add('oneHike'); // add class for styling purposes
   item.innerHTML = `<h2>${hike.name}</h2>
@@ -157,30 +189,14 @@ const hikeList = [
   </div>
   <div>
   <h3>Comments</h3>
-  <p></p>
+  <ul id="filter-comments">
+  ${JSON.stringify(filteredComments)}
+  </ul>
   </div>
+  <textarea type="text" placeholder="Enter your comment for ${hike.name}" id="input-comment" rows="4" cols="70"></textarea>
+  <br>
+  <button id="add-button" name="${hike.name}" >Add Comment Now</button>
   </div>`;
   return item;
   }
-  
-  // getAllComments
-function getAllComments() {
-      const allComments = ls7.readFromLS()
-      allComments.forEach(element => {
-      const list = createComment
 
-  })
-}
-
-// function listTodos() {
-//   const todoList = ls.readFromLS();
-//   todoList.forEach(element => {
-//       const list = createTodoElement(element)
-//       addToList(list);
-//   })
-// }
-
-  //  renderCommentList
-  // function renderCommentList(comment) {
-  //   const commentList = document.createElement("div");
-  //   commentList = `<h2>${hike.name}</h2>

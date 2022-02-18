@@ -210,6 +210,15 @@ input {
     font-family: 'robotoregular', Helvetica, sans-serif;
 }
 
+#quote {
+    background: #333;
+    margin: 10px 0;
+    padding: 10px;
+    color: whitesmoke;
+    font-family: 'robotoregular', Helvetica, sans-serif;
+    font-size: 25px;
+}
+
 
 /* MOBILE VIEW */
 
