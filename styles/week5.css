@@ -42,8 +42,17 @@ body {
   margin-left: 20px;
   font-weight: 700;
   }
-
-  .hideButton {
-    display: none;
+  .hide {
+      display: none;
   }
-  
+
+
+  textarea {
+    margin: 20px;
+    padding: 10px;
+  }
+
+.single-comment, .all-comments h3, .comment-title  {
+    padding: 0 10px;
+    margin: 0 10px;;
+  }
