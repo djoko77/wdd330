@@ -32,7 +32,7 @@ function createList() {
             url: "week7/index.html"
         },
         {
-            label: "Week 9 Notes",
+            label: "Week 8 Notes",
             url: "week8/index.html"
         }
     ];
