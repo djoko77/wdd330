@@ -92,6 +92,8 @@ const hikeList = [
     // Add the click event for each child element so that if the section is clicked it will run showOneHike() to display full details
     addHikeListener() {
     const listArray = Array.from(this.parentElement.children);
+
+    //console.log(JSON.stringify(listArray))
     listArray.forEach(child => {
     child.addEventListener('click', event => {
     this.showOneHike(event.currentTarget.dataset.name); // currentTarget returns whose event listener's callback is currently invoked

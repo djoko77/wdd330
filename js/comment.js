@@ -22,6 +22,7 @@ function getAllComments() {
 }
 
 function renderCommentList(allComments) {
+
       let dateConvert = allComments.date;
       const today = new Date(dateConvert);
       const commentList = document.createElement("li");
@@ -64,6 +65,8 @@ function filterCommentsByName(hikeName) {
   let comments = readFromLS();
 
   var filteredComments = comments.filter(comment => comment.name == hikeName)
+
+  //console.log(filteredComments);
 
   filteredComments.forEach(element => {
       const commentList = renderCommentList(element)
