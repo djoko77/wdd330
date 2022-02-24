@@ -253,6 +253,69 @@ input {
     transform:  rotate(40deg) scale(1.5, 1.5) translateX(150px);
 }
 
+div .animation {
+    background: #333;
+    color: white;
+    font-size: 14px;
+    height: 100px;
+    width: 150px;
+    font-family: 'robotoregular', Helvetica, sans-serif;
+    text-align: center;
+    padding: 5px;
+    margin: 15px 0;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-name: changeColor, moveRight; 
+} 
+
+@keyframes changeColor {
+    0% {
+            background: #333;
+    }
+    50% {
+        background: black;
+    }
+    100% {
+        background: #808080;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(150px)
+    }
+}
+
+.canvas-example {
+    border: dotted 2px black;
+}
+
+.svg {
+    fill:#333;
+    stroke-width: 3;
+    stroke: black;
+}
+
+.pokemon-box {
+    border: dashed 3px #333;
+    width: 400px;
+    height: 150px;
+    text-align: center;
+    font-family: 'robotoregular', Helvetica, sans-serif;
+    vertical-align: middle;
+    line-height: 150px;
+}
+
+.pokemon-img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 5px
+}
+
 /* MOBILE VIEW */
 
 @media only screen and (min-width:300px) and (max-width: 800px) {

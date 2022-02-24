@@ -74,12 +74,25 @@
                         <div class="transform transition">With Transition</div>
                         <br>
                         <h3>Animation</h3>
+                        <div class="animation">Using Animation</div>
                         <br>
                         <h3>Canvas</h3>
+                        <canvas id="myCanvas" class="canvas-example" width="150" height="150"></canvas>
                         <br>
                         <h3>SVG</h3>
-                        <br>
+                        <svg class="svg">
+                            <rect width="200" height="100" />
+                        </svg> 
                         <h3>Drag and Drop</h3>
+                        <p>Choose Only One Pokemon</p>
+                        <div id="pokemon-container" ondrop="drop(event)">
+                            <img class="pokemon-img" id="charmander" src="../img/charmander.png" draggable="true">
+                            <img class="pokemon-img" id="bulbasaur" src="../img/bulbasaur.png" draggable="true">
+                            <img class="pokemon-img" id="squirtle" src="../img/squirtle.png" draggable="true">
+                            <img class="pokemon-img" id="pikachu" src="../img/pikachu.png" draggable="true">
+                        </div>
+                        <div class="pokemon-box" id="choosen-box">Drag Your Pokemon Here</div>
+                        <p id="output"></p>
                     </div>
                 <br>
                 <br>
@@ -91,7 +104,7 @@
             <p>&copy;2022 Rombie Lagunzad - Philippines</p>
             <p><a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
         </footer>
-        <script src="../js/week8.js"></script>
+        <script src="../js/code8.js"></script>
     </body>
 
 </html>
