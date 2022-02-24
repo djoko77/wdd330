@@ -253,9 +253,6 @@ input {
     transform:  rotate(40deg) scale(1.5, 1.5) translateX(150px);
 }
 
-
-
-
 /* MOBILE VIEW */
 
 @media only screen and (min-width:300px) and (max-width: 800px) {

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+ .hide {
+    display: none;
+}
+
+h1 {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #FFD223;
+    font-size: 45px;
+    margin: 0;
+}
+
+main {
+    background-image: url('../img/galaxy.png');
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.character div {
+    color: #CCCCCC;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.wrapper {
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+.character {
+    margin: 30px 0;
+    cursor: url(https://cur.cursors-4u.net/others/oth-1/oth24.cur), auto;
+}
+
+button {
+    background-color: #FFD223;
+    background-origin: none;
+    padding: 10px;
+    margin: 2px;
+    border: none;
+    font-size: 20px;
+    transition: 0.8s;
+    cursor: url(https://cur.cursors-4u.net/others/oth-1/oth24.cur), auto;
+}
+
+button:hover {
+    background-color: #FFE16B;
+    box-shadow: 0px 0px 3px 1px  #CCCCCC;
+}
+
+.nav-butttons {
+    margin: 20px;
+}
+
+.full-details {
+    color: #CCCCCC;
+    font-size: 20px;
+    background-color: rgb(25,25,25,0.7);
+    width: 32vw;
+    margin: 30px 0;
+    padding: 30px 30px;
+    font-size: 25px;
+}
+
+.full-details div {
+    padding: 20px 0;
+}
+
+.backHome {
+    margin: 20px 0;
+}
+
+.full-details span {
+    font-weight: bold;
+}
+
+
