@@ -302,11 +302,11 @@ div .animation {
 .pokemon-box {
     border: dashed 3px #333;
     width: 400px;
-    height: 150px;
+    height: 110px;
     text-align: center;
     font-family: 'robotoregular', Helvetica, sans-serif;
     vertical-align: middle;
-    line-height: 150px;
+    line-height: 110px;
 }
 
 .pokemon-img {
@@ -314,6 +314,22 @@ div .animation {
     height: 100px;
     padding: 5px;
     margin: 5px
+}
+
+#pokemon-output {
+    padding: 10px 0;
+    margin: 10px 0;
+    font-size: 40px;
+    font-family: bold;
+    font-family: 'robotoregular', Helvetica, sans-serif;
+}
+
+.sub-pokemon {
+    padding: 10px 0;
+    margin: 10px 0;
+    font-size: 25px;
+    font-family: bold;
+    font-family: 'robotoregular', Helvetica, sans-serif;
 }
 
 /* MOBILE VIEW */

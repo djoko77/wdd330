@@ -1,37 +1,32 @@
-// Canvas
-var canvas = document.getElementById("myCanvas");
-var context = canvas.getContext("2d");
-context.beginPath();
-context.arc(75, 75, 60, 0, 2 * Math.PI);
-context.stroke();
-context.fillStyle = "lightgray";
-context.fill(); 
-
 // Drag and Drop
-var pokemon = document.querySelectorAll(".pokemon-img");
-var pokemon = null;
-for (var i=0; i < pokemon.length; i++) {    
-    pokemon = image[i];    
-    pokemon.addEventListener('dragstart', function (event) {
-       // handle the dragstart event    
-       event.dataTransfer.setData("text/plain", this.id);
-});}
 
-var chosenPokemon = document.getElementById("choosen-box");
-chosenPokemon.addEventListener("dragover", function(event) {
+var chosenPokemon = document.getElementById("pokebox");
+chosenPokemon.addEventListener("dragover", (event) => {
     event.preventDefault();
+    chosenPokemon.innerHTML = "";
 }); 
 
-chosenPokemon.addEventListener("drop", function(event) {    
-    var pokemonHash = {
-        charmander = 'char char!',
-        bulbasaur = 'bulba!',
-        squirtle = 'squir squir!',
-        pikachu = 'pika pika!'
-    };
+var pokemon = document.querySelectorAll(".pokemon-img");
+var image = null;
+for (var i=0; i < pokemon.length; i++) {    
+    image = pokemon[i];    
+    image.addEventListener('dragstart', (event) => {
+    event.dataTransfer.setData("text/plain", event.target.id);
+});}
 
-    var message = document.getElementById('output');
-    var pokemonId = event.originalEvent.dataTransfer.getData("text/plain");
+chosenPokemon.addEventListener("drop", (event) => {  
+    event.preventDefault();
+    var pokemonId = event.dataTransfer.getData("text/plain");
+    event.target.appendChild(document.getElementById(pokemonId));
+    var pokemonHash = {
+        charmander: 'Char charmander!',
+        bulbasaur: 'Bulbasauuuur!',
+        squirtle: 'Squirtle squirtle!',
+        pikachu: 'Pika pika!'
+    };
+    var message = document.getElementById('pokemon-output');
     message.innerHTML = pokemonHash[pokemonId];
+
 })
+
 
