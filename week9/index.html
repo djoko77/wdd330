@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Week 8 Activity</title>
+        <meta name="description" content="week 9 activity">
+        <link rel="stylesheet" href="../styles/normalize.css">
+        <link rel="stylesheet" href="../styles/main.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><a class="header-link" href="https://djoko77.github.io/wdd330/">WDD 330 Portfolio</a></h1>
+        </header>
+        <main>
+            <div class="column">       
+                <div class="notes-section">
+                        <h2>WEEK 9 NOTES</h2>
+                        <br>
+                        <h3>Chapter 9: The Window Object</h3>
+                        <ul class="subnotes">
+                            <li>The <strong>Browser Object Model (or BOM for short)</strong> is a collection of properties and methods that contain information about the browser and computer screen</li>
+                            <li>Methods of the window object (dialogs)
+                                <ul>
+                                    <li><strong>window.alert()</strong> method pauses the execution of the program and displays a message in a dialog box</li>
+                                    <li><strong>window.confirm()</strong> method stops execution of the program and displays a confirmation dialog with options of OK or Cancel</li>
+                                    <li><strong>window.prompt()</strong> method stops  the execution of the program and displays an input field that allows the user to enter text</li>
+                                </ul>
+                            </li>
+                            <li>The Navigator object contains information about the browser being used
+                                <ul>
+                                    <li><strong>userAgent</strong> returns information about the browser and operating system being used</li>
+                                    <li><strong>window.location</strong> property is an object that contains information about the URL of the current page:
+                                        <ul>
+                                            <li><strong>reload()</strong> method can be used to force a reload of the current page</li>
+                                            <li><strong>assign()</strong> method can be used to load another resource from a URL provided as a parameter</li>
+                                            <li><strong>replace()</strong> method is almost the same as the <strong>assign()</strong> method, except the current page will not be stored in the session history</li>
+                                            <li><strong>toString()</strong> method returns a string containing the whole URL</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><strong>window.open()</strong>method opens a new window</li>
+                            <li><strong>window.resizeTo()</strong>method to resize a window</li>
+                            <li>window.screen object contains information about the screen the browser is displayed on</li>
+                            <li><strong>write()</strong> method writes a string of text to the page</li>
+                            <li>Cookies are small files that are saved locally on a user's computer</li>
+                            <li>Applications that contain sensitive information shouldn't rely on cookies expiring using these methods</li>
+                            <li>Adding the string <strong>; secure</strong> to the end of a cookie will ensure it's only transmitted over a secure HTTPS network</li>
+                        </ul> 
+                        <br>
+                        <h3>Chapter 14: HTML5 APIs</h3>
+                        <ul class="subnotes">
+                            <li>The <strong>data- attribute</strong> is a way of embedding data in a web page using custom attributes that are ignored by the browser</li>
+                            <li>Web Storage API provides a key-value store on the client's computer
+                                <ul>
+                                    <li><strong>localStorage</strong> is a native object with a number of properties and methods used to store data</li>
+                                    <li><strong>sessionStorage</strong> object is only saved for the current session</li>
+                                    <li><strong>clear()</strong> removes everything stored in local storage</li>
+                                    <li><strong>removeItem</strong> method removes an entry from local storage</li>
+                                    <li><strong>setItem</strong> saves an item locally</li>
+                                </ul>
+                            </li>
+                            <li>The Geolocation API is used to obtain the geographical position of the device
+                                <ul>
+                                    <li><strong>getCurrentPosition()</strong> returns a position object to a specified callback function</li>
+                                    <li><strong>watchPosition()</strong> method calls a callback function every time the position of the device is updated</li>
+                                    <li><strong>clearWatch()</strong> method stops the callback being called</li>
+                                </ul> 
+                            </li>
+                            <li>Web workers use the concept of messages to communicate back and forth between the main script and worker script
+                                <ul>
+                                    <li><strong>postMessage()</strong> method sends a message and start the worker working</li>
+                                    <li><strong>terminate()</strong> method stops a completed worker's task within main script or close() method from inside the worker script</li>
+                                    <li><strong>clearWatch()</strong> method stops the callback being called</li>
+                                </ul> 
+                            </li>
+                            <li>The Service Worker API allows a worker script to run in the background with the added benefit of being able to intercept network requests</li>
+                            <li>Websocket is a new protocol that allows two-way communication with a server - also known as push messaging</li>
+                            <li>The Notification API allows to show messages using the system's notifications</li>
+                                
+                            <li>HTML5 introduced the audio and video tags used to insert audio and video clips into a web page <ul>
+                            <li>An audio clip can be inserted into a page with the audio tag, using the src attribute to point to the audio file</li>
+                            <li>A video clip can be inserted with the video tag, using the src attribute to point to the movie file</li>
+                            <li><strong>play()</strong> method starts the clip playing from its current position</li>
+                            <li><strong>pause()</strong> method pauses the clip at its current position</li>
+                            <li><strong>volume</strong> property is a number to set the audio volume</li>
+
+                            <li><strong>muted</strong> property is a boolean value to mute the audio</li>
+                            <li><strong>currentTime</strong> property is a number value to jump to another part of the clip</li>
+                            <li><strong>loop</strong> property is a boolean value to true to make the clip repeat in a loop</li>
+                            <li><strong>duration</strong> property can be used to see how long the clip lasts</li>
+                        </ul>
+                        </li>
+                        </ul> 
+                        <br>
+                        <h3>Question</h3>
+                        <ul class="subnotes">
+                            <li>Do animation and transition slow down the page loading?</li>
+                        </ul>
+                </div>
+                    <br>
+                    <div class="coding-section">
+                        <h2>CODING EXERCISE</h2>
+                        <br>
+                        <h3>Transform</h3>
+                        <div class="transform transform1">Move to the right when hovered! (translate)</div>
+                <br>
+                <br>
+            </div>
+            </div>
+            <a class="home-button" href="https://djoko77.github.io/wdd330/">Go Back to Homepage</a>
+        </main>
+        
+        <footer>
+            <p>&copy;2022 Rombie Lagunzad - Philippines</p>
+            <p><a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+        <script src="../js/week9.js"></script>
+    </body>
+
+</html>
