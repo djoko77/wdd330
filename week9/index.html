@@ -82,8 +82,8 @@
                             <li>The Notification API allows to show messages using the system's notifications</li>
                                 
                             <li>HTML5 introduced the audio and video tags used to insert audio and video clips into a web page <ul>
-                            <li>An audio clip can be inserted into a page with the audio tag, using the src attribute to point to the audio file</li>
-                            <li>A video clip can be inserted with the video tag, using the src attribute to point to the movie file</li>
+                            <li>An audio clip can be inserted into a page with the &lt;audio&gt; tag, using the src attribute to point to the audio file</li>
+                            <li>A video clip can be inserted with the &lt;video&gt; tag, using the src attribute to point to the movie file</li>
                             <li><strong>play()</strong> method starts the clip playing from its current position</li>
                             <li><strong>pause()</strong> method pauses the clip at its current position</li>
                             <li><strong>volume</strong> property is a number to set the audio volume</li>
@@ -96,17 +96,35 @@
                         </li>
                         </ul> 
                         <br>
-                        <h3>Question</h3>
-                        <ul class="subnotes">
-                            <li>Do animation and transition slow down the page loading?</li>
-                        </ul>
                 </div>
                     <br>
                     <div class="coding-section">
                         <h2>CODING EXERCISE</h2>
                         <br>
-                        <h3>Transform</h3>
-                        <div class="transform transform1">Move to the right when hovered! (translate)</div>
+                        <h3>Dialogs</h3>
+                        <button onclick="alertMethod()">Try window.alert()</button>
+                        <br>
+                        <button onclick="confirmMethod()">Try window.confirm()</button>
+                        <br>
+                        <button onclick="promptMethod()">Try window.prompt()</button>
+                        <h3>Animation</h3>
+                        <p>Using setInterval()</p>
+                        <div id='square'></div>
+                        <p>Using requestAnimationFrame()</p>
+                        <div id='square-two'></div>
+                        <br>
+                        <h3>Multimedia</h3>
+                        <p>Using &lt;video&gt;  tag to display a video</p>
+                        <video src='../vid/bike.mp4' controls width="600"></video>
+                        <br>
+                        <br>
+                        <p>Using &lt;audio&gt;  tags to insert audio clips</p>
+                        <h4>Birds Chirping</h4>
+                        <audio src='../sounds/birds.wav' controls></audio>
+                        <h4>Horse Neighing</h4>
+                        <audio src='../sounds/horse.wav' controls></audio>
+                        <h4>Dog Barking</h4>
+                        <audio src='../sounds/dog.wav' controls></audio>
                 <br>
                 <br>
             </div>

@@ -219,6 +219,21 @@ input {
     font-size: 25px;
 }
 
+#square {    
+    margin: 40px;    
+    width: 100px;    
+    height: 100px;    
+    background: #333;
+}
+
+#square-two {
+    margin: 40px;    
+    width: 100px;    
+    height: 100px;    
+    background: #808080;
+}
+
+@keyframes spin { from { transform:rotate(0deg); } to { transform:rotate(3600deg); } }
 
 /* MOBILE VIEW */
 
