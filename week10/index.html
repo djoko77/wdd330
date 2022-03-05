@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Week 10 Activity</title>
+        <meta name="description" content="week 10 activity">
+        <link rel="stylesheet" href="../styles/normalize.css">
+        <link rel="stylesheet" href="../styles/main.css">
+    </head>
+
+    <body>
+        <header>
+            <h1><a class="header-link" href="https://djoko77.github.io/wdd330/">WDD 330 Portfolio</a></h1>
+        </header>
+        <main>
+            <div class="column">       
+                <div class="notes-section">
+                        <h2>WEEK 10 NOTES</h2>
+                        <br>
+                        <h3>Client-side Form Validation</h3>
+                        <ul class="subnotes">
+                            <li>When you enter data, the browser and/or the web server will check to see that the data is in the correct format</li>
+                            <li><strong>client-side validation</strong> is a validation done the browser</li>
+                            <li><strong>server-side validation</strong> is a validation done on the server</li>
+                            <li>3 reasons to validate the form data
+                                <ul>
+                                    <li>We want to get the right data, in the right format</li>
+                                    <li>We want to protect our users' data</li>
+                                    <li>We want to protect ourselves</li>
+                                </ul>
+                            </li>
+                            <li>Types of Client-Side Validation
+                                <ul>
+                                    <li><strong>Built-in form validation</strong>using HTML5 form validation 
+                                        <ul>
+                                            <li>required (mandatory input)</li>
+                                            <li>minlength and maxlength (for string)</li>
+                                            <li>min and max (for numbers)</li>
+                                            <li>type (number, email address)</li>
+                                            <li>pattern (regular expression)</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>JavaScript validation</strong>
+                                        <ul>
+                                            <li><strong>validationMessage</strong> returns a localized message describing the validation constraints that the control doesn't satisfy (if any)</li>
+                                            <li><strong>validity</strong> returns a ValidityState object that contains several properties describing the validity state of the element
+                                                <ul>
+                                                    <li>patternMismatch</li>
+                                                    <li>tooLong</li>
+                                                    <li>tooShort</li>
+                                                    <li>rangeOverflow</li>
+                                                    <li>rangeUnderflow</li>
+                                                    <li>typeMismatch</li>
+                                                    <li>valid</li>
+                                                    <li>valueMissing</li>
+                                                    <li>willValidate</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>checkValidity()</strong> returns true if the element's value has no validity problems)</li>
+                                            <li><strong>reportValidity()</strong> reports invalid field(s) using events</li>
+                                            <li><strong>setCustomValidity(message)</strong> adds a custom error message to the element</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul> 
+                        <br>
+                        <h3>Using the Fetch API</h3>
+                        <ul class="subnotes">
+                            <li>The <strong>Fetch API</strong> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline (responses and requests)</li>
+                            <li>A fetch() promise will reject with a TypeError when a network error is encountered or CORS is misconfigured on the server-side</li>
+                            <li>Response instances are returned when fetch() promises are resolved
+                                <ul>
+                                    <li><strong>Response.status</strong> is an integer with response status code (default value 200)</li>
+                                    <li><strong>Response.statusText</strong> is an HTTP status code message (default value “”)</li>
+                                    <li><strong>Response.ok</strong> checks the status (boolean))</li>
+                                </ul>
+                            </li>
+                        </ul> 
+                        <br>
+                </div>
+                    <br>
+                    <div class="coding-section">
+                        <h2>CODING EXERCISE</h2>
+                        <br>
+                        <h3>Dialogs</h3>
+                <br>
+                <br>
+            </div>
+            </div>
+            <a class="home-button" href="https://djoko77.github.io/wdd330/">Go Back to Homepage</a>
+        </main>
+        
+        <footer>
+            <p>&copy;2022 Rombie Lagunzad - Philippines</p>
+            <p><a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
+        </footer>
+        <script src="../js/week10.js"></script>
+    </body>
+
+</html>
