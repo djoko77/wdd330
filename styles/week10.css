@@ -265,7 +265,29 @@ button {
     margin: 30px;
 }
 
+.week10-form li {
+    font-size: smaller;
+}
 
+::placeholder {
+    font-size: smaller;
+    padding: 5px;
+    color: gray;
+}
+
+/* This is the style of our error messages */
+.error {
+    width  : 100%;
+    padding: 0;
+    font-size: 80%;
+    color: red;
+    background-color: pink;
+    box-sizing: border-box;
+  }
+  
+  .error.active {
+    padding: 0 10px;
+  }
   
 /* MOBILE VIEW */
 

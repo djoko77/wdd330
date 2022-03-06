@@ -86,37 +86,34 @@
                         <h2>CODING EXERCISE</h2>
                         <br>
                         <h3>Built-in form validation</h3>
-                        <form class="week10-form builtin">
+                        <form class="week10-form builtin" action="../week10/thanks-reg.html">
                             <h4>Create an Account</h4>
-                            <label>Username<span> * </span></label><input minlength="6" maxlength="12" id="userName" required></input>
+                            <label>Username<span> * </span></label><input placeholder="Obiwan" minlength="6" maxlength="12" id="userName" required></input>
                             <br>
-                            <label>Email Address<span> * </span></label><input type="email" id="emailAddress" required></input>
+                            <label>Email Address<span> * </span></label><input placeholder="kenobi@gmail.com" type="email" id="emailAddress" required></input>
                             <br>
-                            <label>Phone Number<span> * </span></label><input type="number" id="phoneNumber" required></input>
+                            <label>Phone Number<span> * </span></label><input placeholder="209122133" type="number" id="phoneNumber" required></input>
                             <br>
-                            <label>Password<span> * </span></label><input pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" id="password" required></input>
+                            <label>Password<span> * </span></label><input type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" id="password" required></input>
                             <br>
                             <button type="submit" id="reg-button">Register Now</button>
                             <br>
-                            <p id="registration"></p>
                             <label>Notes</label>
                             <ul>
                                 <li><span> * </span>required fields</li>
-                                <li>username must be minimum of 6 characters and maximum of 12 characters</li>
+                                <li>username must be minimum of 6 characterss and maximum of 12 characters</li>
                                 <li>password must be minimum of 8 characters, at least 1 letter and 1 number</li>
                             </ul>
                         </form>
                     
                         <br>
                         <h3>JavaScript validation</h3>
-                        <form class="week10-form">
+                        <form novalidate class="week10-form form2" action="../week10/thanks-subs.html">
                             <h4>Newsletter Sign up</h4>
-                            <label>Name<span> * </span></label><input id="user-name" required></input>
-                            <br>
-                            <label>Email Address<span> * </span></label><input type="email" id="user-email" required></input>
-                            <br>
+                            <label>Email Address<span> * </span></label>
+                            <input placeholder="jedi@gmail.com" type="email" id="user-email" required></input>
+                            <div class="error" aria-live="polite"></div>
                             <button type="submit" id="subs-button">Subcribe Now</button>
-                            <p id="subscription"></p>
                             <p><span>* </span>required fields</p>
                         </form>
                 <br>
