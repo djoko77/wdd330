@@ -69,8 +69,7 @@
                         <br>
                         <h3>Using the Fetch API</h3>
                         <ul class="subnotes">
-                            <li>The <strong>Fetch API</strong> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline (responses and requests)</li>
-                            
+                            <li>The <strong>Fetch API</strong> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline (responses and requests)<iframe width="100%" height="330" src="//jsfiddle.net/djoko77/u8y9okjs/10/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></li>
                             <li>A fetch() promise will reject with a TypeError when a network error is encountered or CORS is misconfigured on the server-side</li>
                             <li>Response instances are returned when fetch() promises are resolved
                                 <ul>
@@ -95,9 +94,9 @@
                             <br>
                             <label>Phone Number<span> * </span></label><input type="number" id="phoneNumber" required></input>
                             <br>
-                            <label>Password<span> * </span></label><input pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" id="password" required></input></label>
+                            <label>Password<span> * </span></label><input pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" id="password" required></input>
                             <br>
-                            <button id="reg-button">Register Now</button>
+                            <button type="submit" id="reg-button">Register Now</button>
                             <br>
                             <p id="registration"></p>
                             <label>Notes</label>
@@ -107,15 +106,16 @@
                                 <li>password must be minimum of 8 characters, at least 1 letter and 1 number</li>
                             </ul>
                         </form>
+                    
                         <br>
                         <h3>JavaScript validation</h3>
                         <form class="week10-form">
                             <h4>Newsletter Sign up</h4>
-                            <label>Name<span> * </span></label><input id="user-name"></input>
+                            <label>Name<span> * </span></label><input id="user-name" required></input>
                             <br>
-                            <label>Email Address<span> * </span><input id="user-email"></input></label>
+                            <label>Email Address<span> * </span></label><input type="email" id="user-email" required></input>
                             <br>
-                            <button onclick="subscribeNow()">Subcribe Now</button>
+                            <button type="submit" id="subs-button">Subcribe Now</button>
                             <p id="subscription"></p>
                             <p><span>* </span>required fields</p>
                         </form>

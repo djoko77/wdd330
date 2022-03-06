@@ -1,35 +1,43 @@
 var regButton = document.querySelectorAll('#reg-button')[0];
 
 regButton.addEventListener('click', (event) => {
-    console.log("get here 123");
-    document.getElementById('registration').innerHTML = "Registration Complete";
-    console.log("get here");
+    window.location = "https://djoko77.github.io/wdd330/week10/thanks-reg.html"
 })
 
-const email = document.getElementById('user-email');
-const username = document.getElementById('user-name');
-const message = document.getElementById('subsciption');
+var subsButton = document.querySelectorAll('#subs-button')[0];
+var email = document.getElementById('user-email');
+var username = document.getElementById('user-name');
 
-function subscribeNow() {
-
-    // if (email.validity.valid && username.validity.valid) {
-    //     message.textContent = ''; 
-    //     message.className = 'error'; 
-    //   }
-    // else {
-    //     showError();
-    // }
-   // document.getElementById('subscription').innerHTML = "Subscription Complete";
-
-   if(email.validity.valueMissing) {
-    message.textContent = 'Please enter an e-mail address.';
-   }
-    else if(email.validity.typeMismatch) {
-    message.textContent = 'Entered value is not an e-mail address.';  
-    }  
-    document.getElementById('subscription').innerHTML = "Subscription Complete"; 
-
-}
-// function showError() {
+email.addEventListener("input", (event) => {
     
-// }
+    if (email.validity.typeMismatch) {
+        email.setCustomValidity("Please enter a valid e-mail address!");
+        email.reportValidity();
+    } 
+
+    else if (email.validity.valueMissing) {
+        email.setCustomValidity("Email address cannot be blank");
+        email.reportValidity();
+    } 
+
+    else {
+    email.setCustomValidity("");
+}
+})
+
+username.addEventListener("input", (event) => {
+    
+    if (username.validity.valueMissing) {
+        username.setCustomValidity("Us cannot be blank");
+        username.reportValidity();
+    } 
+    else {
+        username.setCustomValidity("");
+}
+})
+
+
+subsButton.addEventListener('click', (event) => {
+    window.location = "https://djoko77.github.io/wdd330/week10/thanks-subs.html"
+});
+
