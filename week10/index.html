@@ -7,7 +7,7 @@
         <title>Week 10 Activity</title>
         <meta name="description" content="week 10 activity">
         <link rel="stylesheet" href="../styles/normalize.css">
-        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/week10.css">
     </head>
 
     <body>
@@ -33,7 +33,7 @@
                             </li>
                             <li>Types of Client-Side Validation
                                 <ul>
-                                    <li><strong>Built-in form validation</strong>using HTML5 form validation 
+                                    <li><strong>Built-in form validation</strong> using HTML5 form validation 
                                         <ul>
                                             <li>required (mandatory input)</li>
                                             <li>minlength and maxlength (for string)</li>
@@ -69,7 +69,8 @@
                         <br>
                         <h3>Using the Fetch API</h3>
                         <ul class="subnotes">
-                            <li>The <strong>Fetch API</strong> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline (responses and requests)</li>
+                            <li>The <strong>Fetch API</strong> provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline (responses and requests)<iframe width="100%" height="330" src="//jsfiddle.net/djoko77/u8y9okjs/10/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe></li>
+                            
                             <li>A fetch() promise will reject with a TypeError when a network error is encountered or CORS is misconfigured on the server-side</li>
                             <li>Response instances are returned when fetch() promises are resolved
                                 <ul>
@@ -85,7 +86,39 @@
                     <div class="coding-section">
                         <h2>CODING EXERCISE</h2>
                         <br>
-                        <h3>Dialogs</h3>
+                        <h3>Built-in form validation</h3>
+                        <form class="week10-form builtin">
+                            <h4>Create an Account</h4>
+                            <label>Username<span> * </span></label><input minlength="6" maxlength="12" id="userName" required></input>
+                            <br>
+                            <label>Email Address<span> * </span></label><input type="email" id="emailAddress" required></input>
+                            <br>
+                            <label>Phone Number<span> * </span></label><input type="number" id="phoneNumber" required></input>
+                            <br>
+                            <label>Password<span> * </span></label><input pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" id="password" required></input></label>
+                            <br>
+                            <button id="reg-button">Register Now</button>
+                            <br>
+                            <p id="registration"></p>
+                            <label>Notes</label>
+                            <ul>
+                                <li><span> * </span>required fields</li>
+                                <li>username must be minimum of 6 characters and maximum of 12 characters</li>
+                                <li>password must be minimum of 8 characters, at least 1 letter and 1 number</li>
+                            </ul>
+                        </form>
+                        <br>
+                        <h3>JavaScript validation</h3>
+                        <form class="week10-form">
+                            <h4>Newsletter Sign up</h4>
+                            <label>Name<span> * </span></label><input id="user-name"></input>
+                            <br>
+                            <label>Email Address<span> * </span><input id="user-email"></input></label>
+                            <br>
+                            <button onclick="subscribeNow()">Subcribe Now</button>
+                            <p id="subscription"></p>
+                            <p><span>* </span>required fields</p>
+                        </form>
                 <br>
                 <br>
             </div>
