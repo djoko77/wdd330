@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Frijole&family=Open+Sans&family=Roboto&display=swap');
+
+body {
+    background-color: aliceblue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-weight: 400;
+    width: 90vw;
+    min-width: 300px;
+}
+
+h1 {
+    font-family: 'Frijole', cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+ ul li {
+    list-style-type: circle;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 10px;
+}
+
+ul li:nth-of-type(odd) {
+    margin-right: 20px;
+}
+
+ul li:nth-of-type(even) {
+    margin-left: 20px;
+}
+
+.backHome {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    background-color: #333;
+    color: whitesmoke;
+    width: 150px;
+}
+
+.backHome:hover {
+    background-color: #808080;
+}
+
+li {
+    cursor: pointer;
+}
