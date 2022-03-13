@@ -5,9 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>Final Project - Pokedex</title>
-        <meta name="description" content="week 5 activity">
-        <link rel="stylesheet" href="../styles/normalize.css">
-        <link rel="stylesheet" href="../styles/main.css">
+        <meta name="description" content="WDD-330 Final Project">
+        <link rel="stylesheet" href="./css/styles.css">
     </head>
 
     <body>
@@ -15,14 +14,30 @@
             <h1><a class="header-link" href="https://djoko77.github.io/wdd330/">WDD 330 Portfolio</a></h1>
         </header>
         <main>
-
+            <div class="wrapper">
+                <div class="left-side">
+                    <div class="search-bar">
+                        <input class="search-pokemon" id="search">
+                        <button type="button" id="searchBtn">Search</button>
+                    </div>
+                    <div class="pokemon-data" id="pokemonData">
+                    </div>
+                    <div  class="pokemon-desc" id="pokemonMessage"></div>
+                </div>
+                <div class="right-side">
+                    <ul class="team-party" id="pokemon-party">
+                    </ul>
+                    <div id="pokemon-full">
+                    </div>
+                </div>
+            </div>
         </main>
         
         <footer>
             <p>&copy;2022 Rombie Lagunzad - Philippines</p>
             <p><a href="http://www.byui.edu/online">BYU-Idaho Online Learning</a></p>
         </footer>
-        <script src="../js/finals.js"></script>
+        <script src="./js/Pokemon.js" type="module"></script>
     </body>
 
 </html>
