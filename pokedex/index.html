@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Final Project - Pokedex</title>
+        <meta name="description" content="WDD-330 Final Project">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <img src="./img/pokemon.png" alt="pokemon-logo">
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="left-side">
+                    <div class="light-up">
+                        <div id="circle1">
+                          <div id="light-click"></div>
+                        </div>
+                        <div id="circle2" class="circleRed">
+                          <div class="light-circle2" id="light-circle2Red"></div>
+                        </div>
+                        <div id="circle2" class="circleYellow">
+                          <div class="light-circle2" id="light-circle2Yellow"></div>
+                        </div>
+                        <div id="circle2" class="circleGreen">
+                          <div class="light-circle2" id="light-circle2Green"></div>
+                        </div>
+                      </div>
+                    <div class="search-bar">
+                        <input class="search-pokemon" id="search"  placeholder="25 or pikachu">
+                        <button type="button" id="searchBtn">&#x1F50E</button>
+                    </div>
+                    <div class="pokemon-screen">
+                        <div class="pokemon-data" id="pokemonData"></div>
+                        <div  class="pokemon-desc" id="pokemonMessage"></div>
+                    </div>
+                    <div type="button" class="pokemonBtn" id="addTeam" value="${result.id}">Add to my Team</div>
+                </div>
+                <div class="right-side">
+                    <h1 class="team-label">My Pokemon Team <span id="team-number"></span></h1>
+                    <ul class="team-party" id="pokemon-party">
+                    </ul>
+                    <div id="pokemon-full" class="data-full">
+                    </div>
+                    <audio id="search-sound" src="./sound/search.mp3"></audio>
+                    <audio id="click-sound" src="./sound/click.wav"></audio>
+                    <audio id="error-sound" src="./sound/error.wav"></audio>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Pokedex &copy; 2022</p>
+        </footer>
+        <script src="./js/Pokemon.js" type="module"></script>
+    </body>
+
+</html>
