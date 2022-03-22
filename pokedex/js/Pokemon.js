@@ -19,13 +19,19 @@ var searchBtn = document.getElementById('searchBtn');
 searchBtn.addEventListener('click', () => {
     document.querySelector('#pokemonData').innerHTML = "";
     let search = document.getElementById('search').value.toLowerCase();
+
+    if (search == "" || search == "") {
+        errorSound();
+        searchError();
+    }
+    else {
     console.log(search);
     let finalURLDetails = queryDetails(search)
     let finalURLDesc = queryDesc(search)
     console.log(finalURLDetails);
     console.log(finalURLDesc );
-
     getData(finalURLDetails, finalURLDesc);
+    }
 })
 
 function queryDetails(search) {
@@ -127,7 +133,8 @@ function saveDetailsPokemon(data) {
 }
 
 function saveDescPokemon(result) {
-    var description = result.flavor_text_entries[1].flavor_text + " " + result.flavor_text_entries[2].flavor_text;
+    // var description = result.flavor_text_entries[1].flavor_text + " " + result.flavor_text_entries[2].flavor_text;
+    var description = result.flavor_text_entries[1].flavor_text;
 
     const message = document.createElement('div');
     const output2 = document.getElementById('pokemonMessage');
@@ -309,7 +316,7 @@ function deletePokemon(target) {
 
 function searchError() {
     qs('#pokemonData')[0].innerHTML = '<div class="error-center"><span class="error-text">4<span><img class="pokeball-img" src="./img/pokeball.png" class="error-img"><span class="error-text">4</span></div>';
-    qs('#pokemonMessage')[0].innerHTML = '<div><p class="short-desc">The Pokemon you are searching is not available in our database. Please search again!</p></div>';
+    qs('#pokemonMessage')[0].innerHTML = '<div><p class="short-desc">The Pokemon you are searching is not available in our database or your input is empty. Please search again!</p></div>';
 }
 
 function countPokemon() {
