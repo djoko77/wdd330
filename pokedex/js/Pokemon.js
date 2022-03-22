@@ -20,7 +20,7 @@ searchBtn.addEventListener('click', () => {
     document.querySelector('#pokemonData').innerHTML = "";
     let search = document.getElementById('search').value.toLowerCase();
 
-    if (search == "" || search == "") {
+    if (search == "" || search == " ") {
         errorSound();
         searchError();
     }
