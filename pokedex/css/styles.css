@@ -92,7 +92,7 @@ h2.pokemon-name {
     margin: 20px 50px;
     height: 150px;
     font-family: 'VT323', monospace;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 150px;
     height: 150px;
     border: 1px solid #000000;
@@ -314,22 +314,20 @@ footer {
   }
 
 .light-circle1 {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     position: relative;
-    top: 10px;
-    left: 10px;
-    animation: lightCircle1Blinks 0.5s ease 0s normal;
+    animation: lightCircle1Blinks 0.1s;
   }
 
 @keyframes lightCircle1Blinks{
     0%{
-      background-color: #3B4CCA;
+      background-color: lightblue;
       box-shadow: none;
     }
     97%{
-      background-color: #3B4CCA;
+      background-color: lightblue;
       box-shadow: none;
     }
     100%{
@@ -364,7 +362,7 @@ footer {
   }
 @keyframes circle2RedBlinks{
     0%{
-      background-color: #710000;
+      background-color: #DC143C;
       box-shadow: none;
     }
     90%{
@@ -386,7 +384,7 @@ footer {
   }
 @keyframes circle2YellowBlinks{
     0%{
-      background-color: #FFDE00;
+      background-color: #FFFF8F;
       box-shadow: none;
     }
     90%{

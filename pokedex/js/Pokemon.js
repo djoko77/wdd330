@@ -6,6 +6,7 @@ var pokemonInfo = [];
 var addBtn = document.getElementById('addTeam');
 addBtn.addEventListener('click', () => {
     addPokemon();
+    lightUp();
 })
 
 listPokemon();
@@ -32,6 +33,7 @@ searchBtn.addEventListener('click', () => {
     console.log(finalURLDesc );
     getData(finalURLDetails, finalURLDesc);
     }
+    lightUp();
 })
 
 function queryDetails(search) {
@@ -58,7 +60,6 @@ function getData(finalURLDetails, finalURLDesc) {
             // resultSearch = "error"
         }
         else {
-            lightUp();
             searchSound();
             saveDetailsPokemon(data);
         }
@@ -69,6 +70,7 @@ function getData(finalURLDetails, finalURLDesc) {
         console.log(result);
         if (result == undefined) {
             searchError();
+            lightUp();
             // resultSearch = "error"
         }
         else {
@@ -228,7 +230,7 @@ function createPokemon(pokemon) {
     clickPokemon.addEventListener('click', (event) => {
         //console.log(event.currentTarget.dataset.name);
         displayFullData(event.currentTarget.dataset.name);
-        // clickPokemon.classList.add('active');
+        lightUp();
     })
 
     const removeButton = document.createElement('button');
@@ -312,6 +314,7 @@ function deletePokemon(target) {
     qs('#pokemon-party')[0].innerHTML = '';
     qs('#pokemon-full')[0].innerHTML = `<div class="message"><p class="message-title">Success</p><p class="prompt-msg"><span>${target}</span> has been removed from your party!</p></div>`;
     listPokemon();
+    lightUp();
 }
 
 function searchError() {
@@ -323,4 +326,5 @@ function countPokemon() {
     const pokemonList = readFromLS();
     qs('#team-number')[0].innerText = `${pokemonList.length}/3`
 }
+
 
