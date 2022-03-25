@@ -45,12 +45,11 @@ export function qs(selector) {
 
   export function lightUp() {
     const blink = document.getElementById('light-click');
-    console.log("get here");
     blink.classList.add('light-circle1');
-    setTimeout(() => {
+    blink.addEventListener("animationend", () => {
       blink.classList.remove("light-circle1");
-  }, 100);
+    });
+  //   setTimeout(() => {
+  //     blink.classList.remove("light-circle1");
+  // }, 100);
   }
-  
-  
-  
