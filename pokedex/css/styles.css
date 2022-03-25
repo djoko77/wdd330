@@ -221,6 +221,7 @@ li {
     font-family: 'VT323', monospace;
     margin: 1px;
     cursor: pointer;
+
 }
 
 .remove-button:hover {
@@ -418,6 +419,20 @@ footer {
       box-shadow: 0 0 9px 0 rgb(253 255 145);
     }
   }
+
+  .home-button {
+    background-color: #808080;
+    color: white;
+    font-family: 'robotoregular', Helvetica, sans-serif;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.7s;
+}
 
 @media only screen and (min-width: 768px) {
     .wrapper {
