@@ -3,11 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap');
 
 .wrapper {
-    margin: 20px;
+    margin: 20px 40px;
 }
 
 html {
     background-image: url('../img/pokeball2.jpg');
+    background-position: 330px 0;
+    background-repeat: no-repeat;
+    background-color: #000;
 }
 
 header img {
@@ -84,7 +87,7 @@ h2.pokemon-name {
     margin: 20px 50px;
     background-color: #232323;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 5px 5px 5px 25px;
 }
 
 .pokemon-desc {
@@ -95,13 +98,13 @@ h2.pokemon-name {
     font-size: 18px;
     line-height: 150px;
     height: 150px;
-    border: 1px solid #000000;
-    box-shadow: inset 1px 1px #306938, inset 2px 2px #000000;
+    border: 2px solid #710000;
+    box-shadow: inset 2px 2px #710000;
     border-radius: 10px;
 }
 
 .pokemon-clickable {
-    width: 312px;
+    width: 295px;
     height: 50px;
     font-family: 'VT323', monospace;
     font-size: 28px;
@@ -123,25 +126,161 @@ h2.pokemon-name {
   cursor: pointer;
 }
 
-.left-side, .right-side {
+.left-side, .right-screen  {
     background-color: #CC0000;
-    border: solid 10px darkred;
 }
 
+.right-screen {
+  height: 510px;
+  border-bottom-right-radius: 20px;
+  margin-top: 90px;
+}
+
+/* Upper right side cover curve */
 .right-side {
-    margin-top: 100px;
     width: 450px;
-    height: 540px;
+    height: 600px;
+    position: relative;
+    margin: 1.8rem 3rem 1.2rem 0;
+    right: -10px;
 }
 
+/* Upper left side shadow for 3D efffect */
 .left-side {
-    width: 450px;
-    height: 640px;
+  width: 450px;
+  height: 640px;
+  border: solid 3px #710000;
+  padding-top: 10px;
+  border-radius: 15px;
 }
 
+.left-side::before {
+  content: "";
+  position: absolute;
+}
+
+.left-side::before {
+  width: 465px;
+  height: 657px;
+  top: 200px;
+  left: 36px;
+  z-index: -1;
+  background-color: #710000;
+  border: 3px solid #710000;
+  border-radius: 20px;
+}
+
+/* Connector of two sides */
+.connector {
+  position: absolute;
+  width: 30px;
+  height: 630px;
+  top: -10px;
+  right: 435px;
+  background-color: #CC0000;
+  z-index: 2;
+  border-left: 3px solid #710000;
+  border-right: 3px solid #710000;
+  border-radius: 15px;
+}
+
+.connector::before {
+  content: "";
+  position: absolute;
+}
+
+.connector::after {
+  content: "";
+  position: absolute;
+}
+
+.connector::before {
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 3px solid #710000;;
+}
+
+.connector:after {
+  width: 100%;
+  height: 18px;
+  bottom: -2px;
+  right: -2px;
+  background-color: #710000;
+  border: 3px solid #710000;
+  border-radius: 50%;
+}
+
+.connector .joint {
+  position: absolute;
+  top: 6%;
+  width: 100%;
+  height: 1rem;
+  border-top: 3px solid #710000;;
+  border-radius: 100%;
+  z-index: 3;
+}
+
+.connector .joint:nth-of-type(2) {
+  top: 8%;
+}
+
+.connector .joint:nth-of-type(3) {
+  top: 88%;
+}
+
+.connector .joint:nth-of-type(4) {
+  top: 90%;
+}
+
+.connector .joint-shadow {
+  position: absolute;
+  width: 15%;
+  height: 98%;
+  left: 10%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 5px;
+}
+
+/* Upper left curve section */
+.light-up {
+  position: relative;
+  height: 90px;
+  top: -20px;
+  padding-bottom: 5px;
+}
+
+.light-up::before {
+  content: "";
+  position: absolute;
+}
+
+.light-up::after {
+  content: "";
+  position: absolute;
+}
+
+.light-up::before, .light-up::after {
+  height: calc(100%);
+  border-radius: 50% 0 50% 0;
+}
+
+.light-up::before {
+  width: 48%;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.5);
+}
+
+.light-up::after {
+  top: 30%;
+  right: 0;
+  width: 55%;
+  border-top: 8px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Search pokemon section */
 .search-bar {
     width: 350px;
-    margin: 10px auto;
+    margin: 0 auto 10px auto;
 }
 
 .search-pokemon {
@@ -172,9 +311,10 @@ h2.pokemon-name {
     color: #fff; 
     text-align: center;
     font-family: 'VT323', monospace;
-    width: 370px;
-    margin: 20px auto 10px auto;
-    border: 3px solid #000000;
+    width: 350px;
+    margin: 0 auto 10px auto;
+    border: 3px solid #710000;
+    box-shadow: inset 2px 2px #710000;
     font-weight: 100;
     border-radius: 5px;
     /* 
@@ -183,13 +323,13 @@ h2.pokemon-name {
 }
 
 .team-party {
-    width: 350px;
+    width: 330px;
     margin: 10px auto;
     padding: 10px;
     height: 170px;
     /* background-color: #DEDEDE; */
-    border: 1px solid #000000;
-    box-shadow: inset 1px 1px #306938, inset 2px 2px #000000;
+    border: 1px solid #710000;
+    box-shadow: inset 3px 3px #710000;
     background-color: #52af5f;
     border-radius: 10px;
 }
@@ -202,8 +342,9 @@ li {
 
 .data-full {
     color: #fff;
-    border: solid 3px #000;
-    margin: 20px 40px;
+    border: solid 3px #710000;
+    box-shadow: inset 3px 3px #710000;
+    margin: 20px 50px;
     background-color: #232323;
     height: 180px;
     font-family: 'VT323', monospace;
@@ -292,14 +433,10 @@ footer {
   margin: 0 10px;
   font-size: 25px;
   letter-spacing: 3px;
+  font-weight: 100;
 }
 
 /* LIGHT SECTION */
-
-.light-up {
-    height: 90px;
-}
-
 #circle1{
     width: 50px;
     height: 50px;
@@ -312,6 +449,7 @@ footer {
     position: relative;
     top: 25px;
     left: 25px;
+    margin: 5px;
   }
 
 .light-circle1 {
@@ -439,10 +577,50 @@ footer {
   color: white;
 }
 
+/* Tablet and desktop view screen */
 @media only screen and (min-width: 768px) {
     .wrapper {
         display: flex;
-        float: column;
+        flex-wrap: column;
+    }
+
+    /* Upper right side cover curve */
+
+    .right-side-cover::before {
+    content: "";
+    position: absolute;
+    }
+
+    .right-side-cover::after {
+    content: "";
+    position: absolute;
+    }
+
+    .right-side-cover::before, .right-side-cover::after,
+    .right-side-cover div {
+    width: 52.3%;
+    background-color: #CC0000;
+    }
+
+    .right-side-cover::before {
+    height: 86px;
+    border-top: 4px solid #710000;
+    border-top-right-radius: 50%;
+    }
+
+    .right-side-cover::after {
+    height: 15%;
+    right: 0;
+    top: -30px;
+    border-bottom: 4px solid #710000;
+    border-bottom-left-radius: 50%;
+    background-color: #000;
+    }
+
+    .right-side-cover div {
+    position: absolute;
+    height: 90px;
+    right: 0;
     }
 }
 
