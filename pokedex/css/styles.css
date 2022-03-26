@@ -84,6 +84,7 @@ h2.pokemon-name {
 
 .pokemon-data {
     border: solid 30px #DEDEDE;
+    box-shadow: inset 4px 4px gray;
     margin: 20px 50px;
     background-color: #232323;
     height: 150px;
@@ -170,78 +171,6 @@ h2.pokemon-name {
   border-radius: 20px;
 }
 
-/* Connector of two sides */
-.connector {
-  position: absolute;
-  width: 30px;
-  height: 630px;
-  top: -10px;
-  right: 435px;
-  background-color: #CC0000;
-  z-index: 2;
-  border-left: 3px solid #710000;
-  border-right: 3px solid #710000;
-  border-radius: 15px;
-}
-
-.connector::before {
-  content: "";
-  position: absolute;
-}
-
-.connector::after {
-  content: "";
-  position: absolute;
-}
-
-.connector::before {
-  width: 100%;
-  height: 20px;
-  border-radius: 50%;
-  border-top: 3px solid #710000;;
-}
-
-.connector:after {
-  width: 100%;
-  height: 18px;
-  bottom: -2px;
-  right: -2px;
-  background-color: #710000;
-  border: 3px solid #710000;
-  border-radius: 50%;
-}
-
-.connector .joint {
-  position: absolute;
-  top: 6%;
-  width: 100%;
-  height: 1rem;
-  border-top: 3px solid #710000;;
-  border-radius: 100%;
-  z-index: 3;
-}
-
-.connector .joint:nth-of-type(2) {
-  top: 8%;
-}
-
-.connector .joint:nth-of-type(3) {
-  top: 88%;
-}
-
-.connector .joint:nth-of-type(4) {
-  top: 90%;
-}
-
-.connector .joint-shadow {
-  position: absolute;
-  width: 15%;
-  height: 98%;
-  left: 10%;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin-top: 5px;
-}
-
 /* Upper left curve section */
 .light-up {
   position: relative;
@@ -290,6 +219,8 @@ h2.pokemon-name {
     height: 20px;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
+    border: 2px solid #710000;
+    box-shadow: inset 2px 2px #710000;
 }
 
 #searchBtn {
@@ -513,6 +444,7 @@ footer {
       box-shadow: 0 0 9px 0 #f00;
     }
   }
+
 .circleYellow{
     background-color: #FFDE00;
     top: -47px;
@@ -621,6 +553,78 @@ footer {
     position: absolute;
     height: 90px;
     right: 0;
+    }
+
+    /* Connector of two sides */
+    .connector {
+      position: absolute;
+      width: 30px;
+      height: 630px;
+      top: -10px;
+      right: 435px;
+      background-color: #CC0000;
+      z-index: 2;
+      border-left: 3px solid #710000;
+      border-right: 3px solid #710000;
+      border-radius: 15px;
+    }
+
+    .connector::before {
+      content: "";
+      position: absolute;
+    }
+
+    .connector::after {
+      content: "";
+      position: absolute;
+    }
+
+    .connector::before {
+      width: 100%;
+      height: 20px;
+      border-radius: 50%;
+      border-top: 3px solid #710000;;
+    }
+
+    .connector:after {
+      width: 100%;
+      height: 18px;
+      bottom: -2px;
+      right: -2px;
+      background-color: #710000;
+      border: 3px solid #710000;
+      border-radius: 50%;
+    }
+
+    .connector .joint {
+      position: absolute;
+      top: 6%;
+      width: 100%;
+      height: 1rem;
+      border-top: 3px solid #710000;;
+      border-radius: 100%;
+      z-index: 3;
+    }
+
+    .connector .joint:nth-of-type(2) {
+      top: 8%;
+    }
+
+    .connector .joint:nth-of-type(3) {
+      top: 88%;
+    }
+
+    .connector .joint:nth-of-type(4) {
+      top: 90%;
+    }
+
+    .connector .joint-shadow {
+      position: absolute;
+      width: 15%;
+      height: 98%;
+      left: 10%;
+      background-color: rgba(255, 255, 255, 0.2);
+      margin-top: 5px;
     }
 }
 
