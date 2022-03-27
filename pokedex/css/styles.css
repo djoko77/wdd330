@@ -4,6 +4,8 @@
 
 .wrapper {
     margin: 20px 40px;
+    display: flex;
+    flex-direction: row;
 }
 
 html {
@@ -207,6 +209,11 @@ h2.pokemon-name {
 }
 
 /* Search pokemon section */
+form {
+  display: flex;
+  flex-direction: row;
+}
+
 .search-bar {
     width: 350px;
     margin: 0 auto 10px auto;
@@ -215,7 +222,7 @@ h2.pokemon-name {
 .search-pokemon {
     width: 290px;
     padding: 6px;
-    margin: 10px 0 0 0;
+    margin: 5px 5px 0 0;
     height: 20px;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
@@ -223,34 +230,204 @@ h2.pokemon-name {
     box-shadow: inset 2px 2px #710000;
 }
 
-#searchBtn {
-    width: 40px;
-    margin: 0;
-    padding: 5px;
-    font-size: 15px;
-    border-radius: 10px;
+.search-pokemon:focus {
+  outline: 2px solid #710000;
+}
+
+.search-btn {
+  width: 40px;
+  height: 33px;
+  margin: 10px 0 5px 0;
+  font-size: 15px;
+  border-radius: 5px;
+  background: darkblue;
+  outline-offset: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 ::placeholder {
-    color: #232323;
+  color: #232323;
+}
+  
+/* Pushable button design */
+
+.pushable-button {
+  background: darkblue;
+  width: 350px;
+  border-radius: 5px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  margin: 0 auto;
+  text-align: center;
 }
 
+.front {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #3B4CCA;
+  color: white;
+  transform: translateY(-6px);
+  will-change: transform;
+  transition: transform 250ms;
+}
+
+.pushable-button:hover .front {
+  transform: translateY(-6px);
+}
+
+.pushable-button:active .front {
+  transform: translateY(-2px);
+}
+
+.search-img {
+  background: #3B4CCA;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transform: translateY(-6px);
+  will-change: transform;
+  transition: transform 250ms;
+  display: block;
+  font-size: 18px;
+}
+
+.search-btn:hover .search-img {
+  transform: translateY(-6px);
+}
+
+.search-btn:active .search-img {
+  transform: translateY(-2px);
+}
+
+/* Upper right side cover curve */
+.right-side-cover::before {
+  content: "";
+  position: absolute;
+  }
+
+  .right-side-cover::after {
+  content: "";
+  position: absolute;
+  }
+
+  .right-side-cover::before, .right-side-cover::after,
+  .right-side-cover div {
+  width: 52.3%;
+  background-color: #CC0000;
+  }
+
+  .right-side-cover::before {
+  height: 86px;
+  border-top: 4px solid #710000;
+  border-top-right-radius: 50%;
+  }
+
+  .right-side-cover::after {
+  height: 15%;
+  right: 0;
+  top: -30px;
+  border-bottom: 4px solid #710000;
+  border-bottom-left-radius: 50%;
+  background-color: #000;
+  }
+
+  .right-side-cover div {
+  position: absolute;
+  height: 90px;
+  right: 0;
+  }
+
+/* Connector of two sides */
+.connector {
+  position: absolute;
+  width: 30px;
+  height: 630px;
+  top: -10px;
+  right: 435px;
+  background-color: #CC0000;
+  z-index: 2;
+  border-left: 3px solid #710000;
+  border-right: 3px solid #710000;
+  border-radius: 15px;
+}
+
+.connector::before {
+  content: "";
+  position: absolute;
+}
+
+.connector::after {
+  content: "";
+  position: absolute;
+}
+
+.connector::before {
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 3px solid #710000;;
+}
+
+.connector:after {
+  width: 100%;
+  height: 18px;
+  bottom: -2px;
+  right: -2px;
+  background-color: #710000;
+  border: 3px solid #710000;
+  border-radius: 50%;
+}
+
+.connector .joint {
+  position: absolute;
+  top: 6%;
+  width: 100%;
+  height: 1rem;
+  border-top: 3px solid #710000;;
+  border-radius: 100%;
+  z-index: 3;
+}
+
+.connector .joint:nth-of-type(2) {
+  top: 8%;
+}
+
+.connector .joint:nth-of-type(3) {
+  top: 88%;
+}
+
+.connector .joint:nth-of-type(4) {
+  top: 90%;
+}
+
+.connector .joint-shadow {
+  position: absolute;
+  width: 15%;
+  height: 98%;
+  left: 10%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 5px;
+}
+
+/* Right side section */
+
 .team-label {
-    /* background-color: #52af5f;
-    color: #000; */
-    background-color: #232323;
-    color: #fff; 
-    text-align: center;
-    font-family: 'VT323', monospace;
-    width: 350px;
-    margin: 0 auto 10px auto;
-    border: 3px solid #710000;
-    box-shadow: inset 2px 2px #710000;
-    font-weight: 100;
-    border-radius: 5px;
-    /* 
-    box-shadow: inset 1px 1px #306938, inset 2px 2px #000000;
-    padding: 10px;; */
+  background-color: #232323;
+  color: #fff; 
+  text-align: center;
+  font-family: 'VT323', monospace;
+  width: 350px;
+  margin: 0 auto 10px auto;
+  border: 3px solid #710000;
+  box-shadow: inset 2px 2px #710000;
+  font-weight: 100;
+  border-radius: 5px;
 }
 
 .team-party {
@@ -321,7 +498,7 @@ li {
 footer {
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    margin: 20px;
+    margin: 30px;
 }
 
 .cover-top {
@@ -367,7 +544,11 @@ footer {
   font-weight: 100;
 }
 
-/* LIGHT SECTION */
+.message {
+  margin: 10px;
+}
+
+/* Light section */
 #circle1{
     width: 50px;
     height: 50px;
@@ -406,7 +587,7 @@ footer {
     }
   }
 
-#circle2{
+.circle2{
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -498,7 +679,7 @@ footer {
     text-align: center;
     display: inline-block;
     font-size: 20px;
-    margin: 20px;
+    margin: 30px;
     cursor: pointer;
     text-decoration: none;
     transition: 0.5s;
@@ -510,122 +691,31 @@ footer {
 }
 
 /* Tablet and desktop view screen */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 300px) and (max-width: 900px)  {
     .wrapper {
         display: flex;
-        flex-wrap: column;
+        flex-direction: column;
     }
 
-    /* Upper right side cover curve */
-
-    .right-side-cover::before {
-    content: "";
-    position: absolute;
+    .right-side-cover {
+      display: none;
     }
 
-    .right-side-cover::after {
-    content: "";
-    position: absolute;
+    .right-screen {
+      margin-top: 0;
+      padding-top: 90px;
+      position: absolute;
+      top: -24px;
+      left: -20px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border: 5px solid #710000;
     }
 
-    .right-side-cover::before, .right-side-cover::after,
-    .right-side-cover div {
-    width: 52.3%;
-    background-color: #CC0000;
-    }
-
-    .right-side-cover::before {
-    height: 86px;
-    border-top: 4px solid #710000;
-    border-top-right-radius: 50%;
-    }
-
-    .right-side-cover::after {
-    height: 15%;
-    right: 0;
-    top: -30px;
-    border-bottom: 4px solid #710000;
-    border-bottom-left-radius: 50%;
-    background-color: #000;
-    }
-
-    .right-side-cover div {
-    position: absolute;
-    height: 90px;
-    right: 0;
-    }
-
-    /* Connector of two sides */
     .connector {
-      position: absolute;
-      width: 30px;
-      height: 630px;
-      top: -10px;
-      right: 435px;
-      background-color: #CC0000;
-      z-index: 2;
-      border-left: 3px solid #710000;
-      border-right: 3px solid #710000;
-      border-radius: 15px;
-    }
-
-    .connector::before {
-      content: "";
-      position: absolute;
-    }
-
-    .connector::after {
-      content: "";
-      position: absolute;
-    }
-
-    .connector::before {
-      width: 100%;
-      height: 20px;
-      border-radius: 50%;
-      border-top: 3px solid #710000;;
-    }
-
-    .connector:after {
-      width: 100%;
-      height: 18px;
-      bottom: -2px;
-      right: -2px;
-      background-color: #710000;
-      border: 3px solid #710000;
-      border-radius: 50%;
-    }
-
-    .connector .joint {
-      position: absolute;
-      top: 6%;
-      width: 100%;
-      height: 1rem;
-      border-top: 3px solid #710000;;
-      border-radius: 100%;
-      z-index: 3;
-    }
-
-    .connector .joint:nth-of-type(2) {
-      top: 8%;
-    }
-
-    .connector .joint:nth-of-type(3) {
-      top: 88%;
-    }
-
-    .connector .joint:nth-of-type(4) {
-      top: 90%;
-    }
-
-    .connector .joint-shadow {
-      position: absolute;
-      width: 15%;
-      height: 98%;
-      left: 10%;
-      background-color: rgba(255, 255, 255, 0.2);
-      margin-top: 5px;
-    }
+      height: 620px;
+      top: -30px;
+    } 
 }
 
 

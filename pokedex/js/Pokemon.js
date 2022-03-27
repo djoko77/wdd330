@@ -136,7 +136,16 @@ function saveDetailsPokemon(data) {
 
 function saveDescPokemon(result) {
     // var description = result.flavor_text_entries[1].flavor_text + " " + result.flavor_text_entries[2].flavor_text;
-    var description = result.flavor_text_entries[1].flavor_text;
+    
+    if (parseInt(result.id) < 650) {
+        var description = result.flavor_text_entries[1].flavor_text;
+    }
+    else if (parseInt(result.id) >= 650 && parseInt(result.id) < 722 ) {
+        var description = result.flavor_text_entries[6].flavor_text;
+    }
+    else {
+        var description = result.flavor_text_entries[7].flavor_text;
+    }
 
     const message = document.createElement('div');
     const output2 = document.getElementById('pokemonMessage');
