@@ -2,22 +2,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap');
 
+html {
+  background-image: url('../img/pokeball2.jpg');
+  background-position: 330px 0;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
 .wrapper {
     margin: 20px 40px;
     display: flex;
     flex-direction: row;
 }
 
-html {
-    background-image: url('../img/pokeball2.jpg');
-    background-position: 330px 0;
-    background-repeat: no-repeat;
-    background-color: #000;
+.instructions {
+  margin: 20px;
+  padding: 10px;
+}
+
+.instruction {
+  font-family: 'Roboto', sans-serif;
+  color: #FFDE00;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.instruction-text {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 2px;
+  font-size: 16px;
+  padding-left: 12px;
+}
+
+.instruction-text li {
+  max-width: 650px;
+  padding: 2px;
+}
+
+.instruction-tex li::before {
+  color: #FFDE00;
 }
 
 header img {
     width: 350px;
-    margin: 10px;
+    margin: 0 10px 10px 10px;
     padding: 10px;
 }
 .pokemon-img {
@@ -39,36 +69,6 @@ h2.pokemon-name {
     font-size: 28px;
     font-weight: 50;
 }
-
-.pokemonBtn {
-    background-color: #3B4CCA;
-    width: 330px;
-    color: white;
-    cursor: pointer;
-    text-align: center;
-    margin: auto;
-    padding: 10px;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    /* border: 1px solid #000000;   
-    box-shadow: 1px 2px #0f537b,
-    2px 2px #0f537b,
-    3px 3px #000000;
-    position: relative; */
-    position: relative;
-    border: 2px solid darkblue;
-    transition: all 0.1s;
-    box-shadow: 2px 4px 1px #0f537b;
-}
-
-.pokemonBtn:active{
-    /* box-shadow: none;
-    top: 3px;
-    right: -3px; */
-    box-shadow: 0px 2px 0px #0f537b;
-    position:relative;
-    top:4px;
-  }
 
 .short-desc {
     color: #000;
@@ -165,7 +165,7 @@ h2.pokemon-name {
 .left-side::before {
   width: 465px;
   height: 657px;
-  top: 200px;
+  top: 190px;
   left: 36px;
   z-index: -1;
   background-color: #710000;
@@ -435,14 +435,13 @@ form {
     margin: 10px auto;
     padding: 10px;
     height: 170px;
-    /* background-color: #DEDEDE; */
     border: 1px solid #710000;
     box-shadow: inset 3px 3px #710000;
     background-color: #52af5f;
     border-radius: 10px;
 }
 
-li {
+.team-party li {
     list-style-type: none;
     width: 350px;
 
@@ -679,7 +678,7 @@ footer {
     text-align: center;
     display: inline-block;
     font-size: 20px;
-    margin: 30px;
+    margin: 0 30px;
     cursor: pointer;
     text-decoration: none;
     transition: 0.5s;
@@ -710,32 +709,12 @@ footer {
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
       border: 5px solid #710000;
+      width: 455px;
     }
 
     .connector {
       height: 620px;
       top: -30px;
     } 
+
 }
-
-
-/* .column-screen {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.column-screen > div {
-    flex: 33.33%;
-    margin: 10px 10px;
-    font-size: 18px;
-} */
-
-/* .column-screen > div {
-    margin: 5px;
-} */
-
-/* .single-pokemon {
-    width: 350px;
-} */
