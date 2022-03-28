@@ -325,7 +325,7 @@ function deletePokemon(target) {
 }
 
 function searchError() {
-    qs('#pokemonData')[0].innerHTML = '<div class="error-center"><span class="error-text">4<span><img class="pokeball-img" src="./img/pokeball.png" class="error-img"><span class="error-text">4</span></div>';
+    qs('#pokemonData')[0].innerHTML = '<div class="error-center"><span class="error-text">4</span><img class="pokeball-img" src="./img/pokeball.gif" class="error-img"><span class="error-text">4</span></div>';
     qs('#pokemonMessage')[0].innerHTML = '<div><p class="short-desc">The Pokemon you are searching is not available in our database or your input is empty. Please search again!</p></div>';
 }
 
