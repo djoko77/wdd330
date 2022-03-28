@@ -152,8 +152,6 @@ function saveDescPokemon(result) {
     output2.innerHTML = " ";
     message.innerHTML = `<p class="short-desc">${description}</p>`
     output2.append(message);
-
-    // button.innerHTML = `<div type="button" class="pokemonBtn" id="addTeam" value="${result.id}">Add <span class="pokemon-name-btn">${result.name}</span> to my Team</div>`
    
 }
 
