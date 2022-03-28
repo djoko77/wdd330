@@ -15,6 +15,7 @@ html {
     flex-direction: row;
 }
 
+/* Instruction section  */
 .instructions {
   margin: 20px;
   padding: 10px;
@@ -45,11 +46,14 @@ html {
   color: #FFDE00;
 }
 
+/* Pokemon logo */
 header img {
     width: 350px;
     margin: 0 10px 10px 10px;
     padding: 10px;
 }
+
+/* Left side section */
 .pokemon-img {
     width: 70px;
     height: 80px;
