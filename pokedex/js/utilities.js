@@ -49,7 +49,4 @@ export function qs(selector) {
     blink.addEventListener("animationend", () => {
       blink.classList.remove("light-circle1");
     });
-  //   setTimeout(() => {
-  //     blink.classList.remove("light-circle1");
-  // }, 100);
   }
