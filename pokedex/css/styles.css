@@ -780,4 +780,16 @@ footer {
   .connector {
     right: 450px;
   }
+
+  .circleRed {
+    top: -30px;
+  }
+
+  .circleYellow {
+    top: -52px;
+  }
+
+  .circleGreen{
+    top: -74px;
+  }
 }
