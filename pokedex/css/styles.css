@@ -722,4 +722,62 @@ footer {
       top: -30px;
     } 
 
+    header img {
+      width: 300px;
+    }
+
+    .pokemon-screen {
+      width: 350px;
+    }
+
+    .left-side {
+      width: 350px;
+    }
+
+    .search-bar {
+      width: 290px;
+  }
+
+  .left-side::before {
+    width: 350px;
+    top: 175px;
+    margin-right: 20px;
+  }
+
+  .pokemon-data {
+    margin: 20px 30px;
+  }
+
+  .pokemon-desc {
+    margin: 20px 30px;
+  }
+
+  .pushable-button {
+    width: 290px;
+  }
+
+  .right-screen {
+    width: 350px;
+    margin-left: 7px;
+  }
+
+  .team-label {
+    width: 290px;
+  }
+
+  .team-party {
+    width: 290px;
+  }
+
+  .pokemon-clickable {
+    width: 250px;
+  }
+
+  .data-full {
+    margin: 20px 20px;
+  }
+
+  .connector {
+    right: 450px;
+  }
 }
