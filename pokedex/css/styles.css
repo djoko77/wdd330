@@ -535,7 +535,7 @@ footer {
 }
 
 .error-center {
-  margin: auto;
+  margin: 10px auto;
   width: 70%;
   text-align: center;
 }
@@ -792,4 +792,10 @@ footer {
   .circleGreen{
     top: -74px;
   }
+
+  .error-center {
+    font-size: 30px;
+    width: 80%;
+  }
+  
 }
