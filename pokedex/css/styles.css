@@ -544,7 +544,7 @@ footer {
   text-transform: uppercase;
   margin: 0 10px;
   font-size: 25px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 100;
 }
 
@@ -797,5 +797,10 @@ footer {
     font-size: 30px;
     width: 80%;
   }
+
+  .data-full {
+    font-size: 16px;
+    border-radius: 5px;
+}
   
 }
